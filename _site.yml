@@ -1,0 +1,20 @@
+name: "dgonzalez80"
+output_dir: "."
+navbar:
+  title: "dgonzalez80"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Medologia Estadistica"
+      href: about.html
+    - text: "Presentacion101"
+      href: punidad101.html
+    - text: "Presentacion102"
+      href: punidad102.html     
+    - text: "Presentacion103"
+      href: punidad103.html  
+    - text: "Presentacion104"
+      href: punidad104.html     
+    
+
+

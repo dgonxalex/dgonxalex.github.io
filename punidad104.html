@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Unidad 1.2  Tablas de frecuencia e indicadores estadísticos</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="" />
+    <meta name="date" content="2021-02-08" />
+    <link href="site_libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="site_libs/remark-css-0.0.1/ki-fonts.css" rel="stylesheet" />
+    <link href="site_libs/remark-css-0.0.1/duke-blue.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Unidad 1.2 <br/>Tablas de frecuencia e indicadores estadísticos
+## Módulo 1
+### Daniel Enrique González Gómez <br/> Universidad Javeriana Cali
+### 2021-02-08
+
+---
+
+class: inverse
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+# AGENDA
+&lt;br/&gt;
+## 1.  Presentación guía de aprendizaje 1.2
+
+## 2. Tablas de frecuencia 
+
+## 3. Indicadores estadísticos
+
+## 4. Varios
+
+---
+
+```r
+library(readxl)
+bd0052=read_excel("bases/bd0052.xlsx", sheet = "base20211",col_types = c("numeric", "numeric", "text", "text", "numeric", "numeric", "text", "numeric"))
+bd0052$carrera[bd0052$carrera=="Biologia"]="Biología"
+bd0052$promacum
+```
+
+```
+##  [1] 3.75 3.47 4.05 3.90 3.55 4.63 4.28 4.02 3.79 3.34 3.50 3.56 4.18 4.58 3.47 3.96 3.59 4.17 3.65 3.56
+## [21] 3.71 4.08   NA 3.49 3.85 3.94 4.02 4.02 3.82 3.40 3.51 4.08 4.22 4.71 3.54 4.16 3.60 3.65 4.25 3.61
+## [41] 3.81 4.20 3.37 3.42 4.02 4.83 3.59 3.91 3.55 4.50 4.26 3.54 3.35 4.24 3.86 3.65 4.24 4.21 3.57 3.98
+## [61] 3.36 3.53 4.33 4.00 3.42 3.51 3.69 4.47 4.18 3.69 4.29 3.84 3.42 4.03 3.65 3.46 4.12 3.73 4.16 3.49
+## [81] 4.07
+```
+
+&lt;img src="imagenes/preguntas.jpg" width="300"&gt;
+---
+class: inverse
+background-image: url("imagenes/tablero1.jpg")
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+## Indicadores
+### ¿Que son?
+---
+## Tablas de freciencia variables cualitativas
+
+.pull-left[
+Las distribuciones de frecuencia o tambien llamadas tablas de frecuencia nos sirven para agrupar los datos y asi permitir resumirir para poder tener una idea mas clara de sus caracteristicas.
+
+Para las variables cualitativas la tabla posee 3 columnas : 
+
++ C1: los diferentes valores que toma la variable. 
+
++ C2:  **frecuencia absoluta** que consiste en el conteo para cada uno de los valores distintos que toma la variable. 
+
++ C3: **frecuencia relativa ** que corresponde  al porcentaje la cantidad de datos para cada los valores
+]
+.pull-right[
+
+```r
+# Forma simple
+library(readxl)
+bd0052=read_excel("bases/bd0052.xlsx", sheet = "base20211",col_types = c("numeric", "numeric", "text", "text", "numeric", "numeric", "text", "numeric"))
+bd0052$carrera[bd0052$carrera=="Biologia"]="Biología"
+data.frame(table(bd0052$carrera))
+```
+
+```
+##                       Var1 Freq
+## 1                 Biología   23
+## 2         Ingeniería Civil   41
+## 3   Ingeniería de Sistemas    4
+## 4   Ingeniería Electrónica    5
+## 5      Ingeniería Mecánica    4
+## 6 Negocios Internacionales    4
+```
+]
+
+---
+
+
+```r
+#utilizando summarytools
+library(summarytools)
+t1=freq(bd0052$carrera, cumul = FALSE, headings = FALSE)
+t1
+```
+
+```
+## 
+##                                  Freq   % Valid   % Total
+## ------------------------------ ------ --------- ---------
+##                       Biología     23     28.40     28.40
+##               Ingeniería Civil     41     50.62     50.62
+##         Ingeniería de Sistemas      4      4.94      4.94
+##         Ingeniería Electrónica      5      6.17      6.17
+##            Ingeniería Mecánica      4      4.94      4.94
+##       Negocios Internacionales      4      4.94      4.94
+##                           &lt;NA&gt;      0                0.00
+##                          Total     81    100.00    100.00
+```
+
+Nota: paquete [summarytools](https://cran.r-project.org/web/packages/summarytools/vignettes/Introduction.html) 
+---
+## Tablas de frecuencia para variables cuantitativas
+
+Para las variables cuantitativas las tablas de frecuencias tiene una presentacion diferente a la vista anteriormente. Como se trata de variables con una gran numero de valores diferentes, es necesario dividirlas por intervalos .
+
+
+```r
+library(agricolae)
+h2=with(bd0052,graph.freq(promacum,plot=FALSE));t2=table.freq(h2);
+colnames(t2) = c("  LI  ", "  LS  ", "marca clase'", "Frec.Abs","Frec.Rel", "Frec.Abs.Ac","Frec.Rel.Ac")
+t2
+```
+
+```
+##     LI     LS   marca clase' Frec.Abs Frec.Rel Frec.Abs.Ac Frec.Rel.Ac
+## 1   3.30   3.53        3.415       16     20.0          16        20.0
+## 2   3.53   3.76        3.645       21     26.2          37        46.2
+## 3   3.76   3.99        3.875       11     13.8          48        60.0
+## 4   3.99   4.22        4.105       19     23.8          67        83.8
+## 5   4.22   4.45        4.335        7      8.8          74        92.5
+## 6   4.45   4.68        4.565        4      5.0          78        97.5
+## 7   4.68   4.91        4.795        2      2.5          80       100.0
+```
+Frec.Abs : Frecuencia absoluta &lt;br/&gt;
+Frec.Rel : Frecuencia relativa &lt;br/&gt;&lt;br/&gt;
+Frec.Abs.Ac : Frecuencia Absoluta Acumuada &lt;br/&gt;
+Frec.Rel.Ac : Frecuencia Relativa Acumulada 
+
+---
+
+
+```r
+library(stringr)
+data("iris")
+t1=freq(iris$Species, cumul = FALSE, headings = FALSE)
+t1
+```
+
+```
+## 
+##                    Freq   % Valid   % Total
+## ---------------- ------ --------- ---------
+##           setosa     50     33.33     33.33
+##       versicolor     50     33.33     33.33
+##        virginica     50     33.33     33.33
+##             &lt;NA&gt;      0                0.00
+##            Total    150    100.00    100.00
+```
+
+---
+## Rango percentil
+
+&lt;img src="sandwich.png" width="200"&gt;
+
+Es un número que divide la muestra en dos partes. `\(x\)` % de los datos de la muestra son iguales o menores que `\(P_x\)` y un `\((100-x)\)` % por encima  de el.
+
+![](imagenes/carrera.jpg)
+
++ Participé en una carrera **K10** y fuí `\(P_{30}\)`
+
++ Mi nota en un exámen de matemáticas fué `\(P_{90}\)`
+
++ Que significa: $P_{25}; `\(P_{50}\)`;  `\(P_{75}\)`
+---
+## Diagrama de cajas 
+
+
+```r
+library(ggplot2);bd0052[23,5]=5.1; bd0052[24,5]=2.6; ggplot(bd0052, aes(x=promacum))+geom_boxplot()
+```
+
+![](punidad104_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+atipico | `\(LI=Q_{1}- 1.5(Q_{3}-Q_{1})\)` | `\(Q_{1}\)` | `\(Q_{2}\)` | `\(Q_{3}\)` | `\(LS=Q_{3}+ 1.5(Q_{3}-Q_{1})\)` |  atipico 
+
+---
+## Características de los  datos
+
+.pull-left[
+**Tendencia central**
+
++ media
+
++ mediana
+
++ moda
+
++ media truncada
+
++ rango medio
+
++ media armónica
+
++ media geométrica
+]
+.pull-right[
+**Dispersión**
+
++ rango
+
++ varianza
+
++ desviación estándar
+
++ coeficiente de variación
+
+**Forma**
+
++ sesgo o asimetría
+
++ curtosis
+]
+---
+## Media aritmetica : 
+
+`$$\widehat{x}= \frac{1}{n} \sum_{i=1}^{n} x_{i}$$`
+
+Es una de los indicadores estadísticos mas conocidos
+
+Propiedades de la media :
++ La suma de las desviaciones de los datos con respecto a la media es cero. `\(\sum (x_{i}-\bar{x})=0\)`.
+
++ La suma de los cuadrados de las desviaciones de los datos con respecto a un valor {\bf `\(a\)`} es mínimo cuando `\(a=\bar{x}\)`.
+
++ Si `\(x_{i}=k\)` para todo `\(i\)`, entonces, `\(\bar{x}=k\)`.
+
++ Si todos los datos de una variable se multiplican por una constante `\(k\)`, es decir `\(y_{i}=kx_{i}\)`, entonces `\(\bar{y}=k\bar{x}\)`
+
++ Si `\(z_{i}=a x_{i}+b y_{i}\)`, donde: ***a***, ***b*** constantes y `\(x_{i}\)`, `\(y_{i}\)` variables, entonces: `\(\bar{z}=a\bar{x}+b\bar{y}\)`. 
+
+---
+.pull-left[
+
+```r
+mean(mtcars$mpg,na.rm = TRUE)
+```
+
+```
+## [1] 20.09062
+```
+
+
+```r
+mean(bd0052$promacum, na.rm = TRUE)
+```
+
+```
+## [1] 3.869259
+```
+]
+.pull-right[
+**PROBLEMA ** 
+
+```r
+x=1:10
+x
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10
+```
+
+```r
+cat("media :",mean(x))
+```
+
+```
+## media : 5.5
+```
+
+
+```r
+x[10]=20
+x
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 20
+```
+
+```r
+cat("media :" ,mean(x))
+```
+
+```
+## media : 6.5
+```
+]
+
+
+---
+## Mediana : 
+
+.pull-left[
+***Me*** :Es el número que divide la muestra en dos partes de igual proporción (50% : 50%). Es decir que corresponde a:
+
+`\(P_{50} = D_{5} = Q_{2}\)`
+
+Tambien es corresponde a la linea central del diagrama de cajas.
+
+
+```r
+median(bd0052$promacum,na.rm = TRUE)
+```
+
+```
+## [1] 3.84
+```
+]
+.pull-right[
+
+```r
+boxplot(bd0052$promacum)
+```
+
+![](punidad104_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+La **Me** corresponde a la linea central de a caja en el diagrama de cajas
+]
+---
+La mediana es mas robusta a los cambio en los datos extremos. En presencia de datos atípicos es mejor utilizar la mediana en lugar que la media.
+
+
+```r
+x=1:10
+x
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10
+```
+
+```r
+cat("media :" ,median(x))
+```
+
+```
+## media : 5.5
+```
+
+
+```r
+x[10]=20
+x
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 20
+```
+
+```r
+cat("media :" ,median(x))
+```
+
+```
+## media : 5.5
+```
+---
+## La moda  
+
+**Mo** : Dato o valor que más se repite.
+Es utilizada como medida de tendencia central en variables cualitativas o 
+o en cuantitativas discretas con pocos valores. En una tabla o  gráfico se puede distinguir fácilmente. 
+
+```r
+#utilizando summarytools
+library(summarytools)
+t1=freq(bd0052$carrera, cumul = FALSE, headings = FALSE)
+t1
+```
+
+```
+## 
+##                                  Freq   % Valid   % Total
+## ------------------------------ ------ --------- ---------
+##                       Biología     23     28.40     28.40
+##               Ingeniería Civil     41     50.62     50.62
+##         Ingeniería de Sistemas      4      4.94      4.94
+##         Ingeniería Electrónica      5      6.17      6.17
+##            Ingeniería Mecánica      4      4.94      4.94
+##       Negocios Internacionales      4      4.94      4.94
+##                           &lt;NA&gt;      0                0.00
+##                          Total     81    100.00    100.00
+```
+
+moda : **Ingeniería Civil**
+
+---
+## Otras medidas de centro
+
++ Media truncada al 10%
+
+```r
+mean(bd0052$promacum, na.rm = TRUE, trim = 0.10)
+```
+
+```
+## [1] 3.846154
+```
+
++ **Rango medio** : `\(\frac{1}{2}(max(x)+min(x))\)`
+
+```r
+(max(bd0052$promacum,na.rm = TRUE)+min(bd0052$promacum,na.rm = TRUE))/2
+```
+
+```
+## [1] 3.85
+```
++ **Media geométrica** : este indicador de tendencia central se utiliza para promediar tasa de crecimiento o de interes. Para encontar su valor se multiplican los valores de `\(n\)` tasas incrementadas en uno. A ese producto se le extrae la rainz n-esima.
+
++ **Media armónica** : Este indicador corresponde al inverso de la media aritmetica 
+
+---
+class: inverse
+
+## Problema reconocimiento de grupo
+
+.pull-left[
+**Grupo 1** &lt;br/&gt;&lt;br/&gt;
+Edades : 19, 22, 18, 21 &lt;br/&gt;
+Promedio : 20 años
+
+&lt;img src="imagenes/grupo1.png" width="300"&gt;
+]
+.pull-right[
+**Grupo 2**&lt;br/&gt;
+Edades : 39, 38, 2, 1&lt;br/&gt;
+Promedio : 20 años
+
+&lt;img src="imagenes/grupo2.png" width="300"&gt;
+
+Hace falta otro indicador que nos oriente de cual grupo hablamos cuando solo tenemos como informacion : media = 20 años.
+]
+---
+# Indicadores de Dispersión
+
+## Rango
+
+`\(r = max(x) - min(x)\)`
+
+En caso de los dos grupos:
+
+**Grupo 1**  : &lt;br/&gt;
+`\(\bar{x} = 20\)` años  &lt;br/&gt;
+`\(r = 4\)` años
+
+**Grupo 1**  : &lt;br/&gt;
+`\(\bar{x} = 20\)` años  &lt;br/&gt;
+`\(r = 38\)` años
+
+
+Indicador muy útil cuando se deben realiar cálculos rápidos
+---
+## Varianza `\(s^{2}\)`
+
+Es la medida de dispersión más utilizada en estadística y está definida por 
+
+`$$s^{2}=\frac{1}{n-1} \sum_{i=1}^{n} (x_{i}-\bar{x})^{2}$$`
+
+**Propiedades de la varianza**
+
++ `\(s^{2} = \frac{1}{n} \sum x_{i}^{2}- (\bar{x})^{2}\)` 
+
++ La varianza es siempre no negativa  `\(s^{2} &gt;=0\)`
+
++ La varianza de una constante es cero `\(s_{k}^{2}=0\)`
+
++ Si `\(y_{i}=k x_{i}\)`, entonces `\(s_{y}^{2}= k^{2} S_{x}\)`
+
++ Si `\(y_{i}=x_{i} + k\)` , entonces  `\(S_{y}^{2}= S_{x}\)`
+
++ Si `\(z_{i} = a x_{i} + b y_{i}\)`, entonces `\(s_{z}^{2}\)` = `\(a^{2}s_{x}^{2}\)` + `\(b^{2}s_{y}^{2}\)` + `\(2ab\)` `\(cov(xy)\)`
+
+La varianza se puede interpretar como el promedio de las diferencias cuadradas entre cada uno de los datos y la media
+---
+El problema de la varianza es su **interpretación**
+
+Sus unidades son al cuadrado y en la mayoría de los casos no es posible interpretarlos. Por esta razón se optó por utilizar otra mediada de dispersión
+
+### Desviación estándar 
+
+Es la raíz cuadrada de la varianza
+
+`$$s=\sqrt{s^{2}}$$`
+
+**Nota** : no aplican todas las propiedades de la varianza
+
+
+```r
+cat( "Varianza :",var(bd0052$promacum) )
+```
+
+```
+## Varianza : 0.1658319
+```
+
+```r
+cat("Desviación estándar :",sd(bd0052$promacum))
+```
+
+```
+## Desviación estándar : 0.4072247
+```
+Aunque la desviacion estandar reduce el problema dibido a tener las mismas unidades de la variable, es util para compacion de dos grupos
+
+---
+## Coeficiente de variación
+
+Nos indica que tan grande o que tan pequeña es la desviación estándar con respecto a su media
+
+$$CV= \dfrac{s}{\bar{x}} \times 100 \% $$
+
+Existen diferentes reglas empíricas para la interpretación del coeficiente de variación. Una de ellas establece como límite el 20% para separar los grupos homogéneos de los heterogéneos Por lo general se utiliza un valor hasta el 20% para determinar que un grupo de datos son homogéneos, de lo contrario se calificará como heterogéneo.
+
+
+```r
+cat("Coeficiente de variación :",sd(bd0052$promacum)/mean(bd0052$promacum)*100)
+```
+
+```
+## Coeficiente de variación : 10.52462
+```
+
+---
+class: inverse
+# Indicadores de forma
+
+## Curtosis
+
+Se mide a través del coeficiente de curtosis que mide cuan **puntiaguda** es una distribución respecto a la curva de la distribución normal entandar.
+
+De acuerdo con su valor, la puntudez de los datos puede clasificarse en tres grupos:
+
++ **Leptocúrtica**, con valores grandes para el coeficiente (CA&gt;0)
+
++ **Mesocúrtica**, con valores medianos para el coeficiente (CA=0)
+
++ **Platicútrica**, con valores pequeños para el coeficiente (CA&lt;0) 
+
+&lt;img src="imagenes/curtosis.png" width="500"&gt;
+
+---
+class: inverse
+## Asimetría o sesgo
+
+Mide que tanto la forma de la distribución de frecuencias de los datos es simétrica o no con respecto a la media. Esta característica de los datos se mide a través del coeficiente de asimetría o sesgo.
+
++ Es **simétrica** si el  valor del indicador es 0  ($\bar{x}=Me$)
+
++ Es **asimétrica a la izquierda** si el valor del indicador es negativo ($\bar{x}&lt;Me$)
+
++ Es **asimétrica a la derecha** si el valor del indicador es positivo ($\bar{x}&gt;Me$)
+&lt;img src="imagenes/asimetria.png" width="700"&gt;
++ **Asimetria negativa ** : Poco con poco, mucho con mucho
++ **Simetrica** : Poco con poco, poco con mucho, mucho al rededor de un centro
++ **Asimetria positiva** : Mucho con poco, poco con mucho
+---
+
+.pull-left[
+
+```r
+bd0052=read_excel("bases/bd0052.xlsx", sheet = "base20211",col_types = c("numeric", "numeric", "text", "text", "numeric", "numeric", "text", "numeric")); bd0052$carrera[bd0052$carrera=="Biologia"]="Biología"
+summarytools::descr(bd0052$promacum)
+```
+
+```
+## Descriptive Statistics  
+## value  
+## N: 81  
+## 
+##                     value
+## ----------------- -------
+##              Mean    3.86
+##           Std.Dev    0.36
+##               Min    3.34
+##                Q1    3.55
+##            Median    3.83
+##                Q3    4.16
+##               Max    4.83
+##               MAD    0.43
+##               IQR    0.61
+##                CV    0.09
+##          Skewness    0.50
+##       SE.Skewness    0.27
+##          Kurtosis   -0.58
+##           N.Valid   80.00
+##         Pct.Valid   98.77
+```
+]
+
+.pull-right[
+
+```r
+summarytools::descr(mtcars$mpg)
+```
+
+```
+## Descriptive Statistics  
+## value  
+## N: 32  
+## 
+##                      value
+## ----------------- --------
+##              Mean    20.09
+##           Std.Dev     6.03
+##               Min    10.40
+##                Q1    15.35
+##            Median    19.20
+##                Q3    22.80
+##               Max    33.90
+##               MAD     5.41
+##               IQR     7.38
+##                CV     0.30
+##          Skewness     0.61
+##       SE.Skewness     0.41
+##          Kurtosis    -0.37
+##           N.Valid    32.00
+##         Pct.Valid   100.00
+```
+]
+---
+.pull-left[
+
+```r
+d1=density(bd0052$promacum, na.rm=TRUE); plot(d1)
+```
+
+![](punidad104_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
+]
+.pull-right[
+
+```r
+data("mtcars")
+d2=density(mtcars$mpg); plot(d2)
+```
+
+![](punidad104_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+]
+---
+## Actividades
+&lt;br/&gt;
++ **Actividad 1** : Realice las  actividades consignadas en  el **Taller 1-01**.  Adjunte y envíe las respuesta a la plataforma de Blackboard en  formato pdf.
+    + **Nota**: RMarkdown permite realizar el trabajo facilmente
+
+&lt;br/&gt;
++ **Actividad 2** : A partir de la  información contenida en  la base de datos  seleccionada en la **Unidad 1.1**, realice un análisis de al menos una variable cualitativa y una cuantitativa teniendo como soportes las tablas de frecuencia y los indicadores estadísticos correspondiente.
+
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+**Fecha**  : 14 de febrero 2021
+
+**Hora**   : 23:59 hora local 
+---
+class: inverse
+background-image: url("imagenes/person-1245959_1920.jpg")
+
+	&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+# &lt;p style="color:yellow"&gt; Lo podemos lograr... &lt;/p&gt;
+
+## &lt;p style="color:yellow"&gt; Daniel Enrique González Gómez &lt;/p&gt;
+
+Imagen tomada de : https://pixabay.com/es/images/search/paisaje/
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highighStyle": "github",
+"highlighLine": true,
+"countIncrementalSlides": true,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
