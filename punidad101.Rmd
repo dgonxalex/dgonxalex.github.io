@@ -85,7 +85,7 @@ p
 
 ---
 <html>
-<div class="container-wrapper-genially" style="position: relative; min-height: 400px; max-width: 100%;"><video class="loader-genially" autoplay="autoplay" loop="loop" playsinline="playsInline" muted="muted" style="position: absolute;top: 45%;left: 50%;transform: translate(-50%, -50%);width: 80px;height: 80px;margin-bottom: 10%"><source src="https://static.genial.ly/resources/panel-loader-low.mp4" type="video/mp4" />Your browser does not support the video tag.</video><div id="5f1ba8da1829700da368b4ab" class="genially-embed" style="margin: 0px auto; position: relative; height: auto; width: 100%;"></div></div><script>(function (d) { var js, id = "genially-embed-js", ref = d.getElementsByTagName("script")[0]; if (d.getElementById(id)) { return; } js = d.createElement("script"); js.id = id; js.async = true; js.src = "https://view.genial.ly/static/embed/embed.js"; ref.parentNode.insertBefore(js, ref); }(document));</script>
+<div class="container-wrapper-genially" style="position: relative; min-height: 400px; max-width: 100%;"><video class="loader-genially" autoplay="autoplay" loop="loop" playsinline="playsInline" muted="muted" style="position: absolute;top: 45%;left: 50%;transform: translate(-50%, -50%);width: 80px;height: 80px;margin-bottom: 10%"><source src="https://static.genial.ly/resources/panel-loader-low.mp4" type="video/mp4" />Your browser does not support the video tag.</video><div id="5f2ae96b94d21c0d831cdb4c" class="genially-embed" style="margin: 0px auto; position: relative; height: auto; width: 100%;"></div></div><script>(function (d) { var js, id = "genially-embed-js", ref = d.getElementsByTagName("script")[0]; if (d.getElementById(id)) { return; } js = d.createElement("script"); js.id = id; js.async = true; js.src = "https://view.genial.ly/static/embed/embed.js"; ref.parentNode.insertBefore(js, ref); }(document));</script>
 </html>
 ---
 # Base de datos
@@ -133,14 +133,11 @@ DT::datatable(head(bd0052[,var1],81),fillContainer = FALSE, options = list(pageL
 ```
 
 ---
-# Etapas del proceso de datos
 
-![](proceso_datos.png)
-]
-
----
 <html>
+
 <div class="container-wrapper-genially" style="position: relative; min-height: 400px; max-width: 100%;"><video class="loader-genially" autoplay="autoplay" loop="loop" playsinline="playsInline" muted="muted" style="position: absolute;top: 45%;left: 50%;transform: translate(-50%, -50%);width: 80px;height: 80px;margin-bottom: 10%"><source src="https://static.genial.ly/resources/panel-loader-low.mp4" type="video/mp4" />Your browser does not support the video tag.</video><div id="5f1ba8da1829700da368b4ab" class="genially-embed" style="margin: 0px auto; position: relative; height: auto; width: 100%;"></div></div><script>(function (d) { var js, id = "genially-embed-js", ref = d.getElementsByTagName("script")[0]; if (d.getElementById(id)) { return; } js = d.createElement("script"); js.id = id; js.async = true; js.src = "https://view.genial.ly/static/embed/embed.js"; ref.parentNode.insertBefore(js, ref); }(document));</script>
+
 </html>
 ---
 # Base de datos
@@ -190,7 +187,7 @@ DT::datatable(head(bd0052[,var1],81),fillContainer = FALSE, options = list(pageL
 ---
 # Etapas del proceso de datos
 
-![](proceso_datos.png)
+![](imagenes/proceso_datos.png)
 <br/><br/>
 
 [*] Tomado de : https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/
@@ -274,7 +271,7 @@ Las bases de datos debe estar acompañadas de una ficha técnica donde si indica
 	
 ---
 class: inverse
-background-image: url("paisaje1.jpg")
+background-image: url("imagenes/paisaje1.jpg")
 
 	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 # <p style="color:blue"> Gracias </p>
