@@ -30,7 +30,7 @@ class: inverse
 library(readxl)
 bd0052=read_excel("bases/bd0052.xlsx", sheet = "base20211",col_types = c("numeric", "numeric", "text", "text", "numeric", "numeric", "text", "numeric"))
 bd0052$carrera[bd0052$carrera=="Biologia"]="Biología"
-bd0052$promacum
+matrix(bd0052$promacum, ncol = 12)
 
 ```
 
