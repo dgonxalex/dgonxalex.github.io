@@ -24,8 +24,7 @@ class: inverse
 ## 3. Varios
 
 ---
-class: inverse
-![](imagenes/diapositiva3.png)
+![](imagenes/diapositiva4.png)
 ---
 # Actividad
 
