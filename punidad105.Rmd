@@ -24,6 +24,9 @@ class: inverse
 ## 3. Varios
 
 ---
+class: inverse
+![](imagenes/diapositiva3.png)
+---
 # Actividad
 
 ### Punto 1
@@ -64,10 +67,9 @@ https://rextester.com/KJGK8142
 
 + c) Calcule la media recortada a 20% de las mediciones para cada método.
 
-+ d) Calcule el primero y el tercer cuartil para cada método.
-
-
 ---
+
++ d) Calcule el primero y el tercer cuartil para cada método.
 
 + e) Calcule la desviación estándar de las mediciones paracada método.
 
@@ -112,7 +114,7 @@ En otra clase de estadística, el número total de estudiantes no se conoce. En 
 **Hora**   : 23:59 hora local 
 ---
 class: inverse
-background-image: url("imagenes/wave-1246560_1920.jpg")
+background-image: url("imagenes/the-road-815297_1280.jpg")
 
 	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 # <p style="color:yellow"> Con trabajo lo podemos hace.... </p>
