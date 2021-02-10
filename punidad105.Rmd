@@ -26,11 +26,11 @@ class: inverse
 ---
 # Actividad
 
+### Punto 1
+
 1. Verdadero o falso: para cualquier lista de números, la mitad de ellos estará debajo de la media.
 
 1. ¿Es la media de la muestra siempre el valor que ocurre con más frecuencia? Si es así, explique por qué. Si no, dé un ejemplo.
-
-1. ¿Es la media de la muestra siempre igual a uno de los valores que está en la muestra? Si es así, explique por qué. Si no, dé un ejemplo.
 
 1. ¿La mediana de la muestra siempre es igual a uno de los valores de la muestra? Si es así, explique por qué. Si no, dé un ejemplo.
 
@@ -38,6 +38,7 @@ class: inverse
 
 1. En cierta compañía, cada trabajador recibió un aumento de $150 mil por semana. ¿Cómo afecta esto la media de los sueldos? ¿Y la desviación estándar de los sueldos?
 ---
+### Punto 2 
 
 Un grupo de  16 estudiantes mide la circunferencia de una pelota de tenis por cuatro métodos diferentes, éstos fueron:
 
