@@ -1,4 +1,8 @@
+#===============================================================================
+#
 # CONSTRUCCION DE TABLAS E INDICADORES DESCRIPTIVOS
+#
+#===============================================================================
 # Resumirlos datos en tablas facilita su analisis y tambien su representacion
 # grafica. Varios graficos estan basados en tablas como veremos en la unidad 1.3
 
@@ -55,9 +59,9 @@ FreRel=round(h$counts/sum(h$counts),2)
 FreAbAc=cumsum(FreAbs)
 FreRAc=cumsum(FreRel)
 data.frame(LI,LS,FreAbs,FreRel, FreAbAc, FreRAc)
-#------------------------------------------------------------------------------
+#===============================================================================
 # INDICADORES ESTADISTICOS
-
+#===============================================================================
 # VARIABLE CUALITATIVA (@)
 install.packages("modeest")
 library(modeest)
@@ -71,3 +75,4 @@ summarytools::descr(iris)
 summarytools::descr(cars)
 
 # YA ESTAMOS LISTOS PARA INTERPRETAR LA INFORMACION PROCESADA
+#===============================================================================

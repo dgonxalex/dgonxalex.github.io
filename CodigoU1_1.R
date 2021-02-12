@@ -1,4 +1,8 @@
-# IMPOARTACION DE DATOS EN R  ==================================================
+#===============================================================================
+#
+# IMPORTAR LOS DATOS EN R  
+#===============================================================================
+#
 # Se puede realizar de formas diferntes
 # 1. Utilizando RStudio : File /Import Dataset/From text (base)
 #                         En el caso de que los datos en forato csv
@@ -27,7 +31,7 @@
   
 # Para guardar el archivo en mi Pc
 # El formarto RDS es menos pesado
-saveRDS(df.ins, file = "Colombia.RDS")  
+saveRDS(df.ins, file = "/home/deg/github/bases_proyectos/Colombia.RDS")  
   
 #4. Podemos trabajar con Dataset disponible en los paquetes de R
 #   Para ello solo utilizamos la funcion data
@@ -43,9 +47,12 @@ saveRDS(df.ins, file = "Colombia.RDS")
  # "/home/deg/github/dgonxalex.github.io/Colombia.csv"
  # Ahora pego la ruta dentro de la funcion read.csv() y le indico que me la copie
  # en un objeto
- Colombia=read.csv("/home/deg/github/dgonxalex.github.io/Colombia.csv")
- #===============================================================================  
+ Colombia=read.csv("/home/deg/github/bases_proyectos/Colombia.csv")
+#===============================================================================  
+#
 # REVISAR Y ARREGLAR LOS DATOS
+#
+#===============================================================================
 # Despues de vajar la data es necesario revisar que no tenga problemas como:
 #   variables con cademas escritas de diferente forma, p.ej.: casa, CASA, Casa
 #   esta revision la podemos hacer rapidamente con 
@@ -140,12 +147,13 @@ table(df.ins$per_etn_)
 # Cuando la base esta bien, podemos continuar con los demas procesos
 # Tambien a podemos guardar para una posterior revision
 # Guardar el archivo en formato csv
-write_csv(df.ins, "Colombia.csv")
+write_csv(df.ins, "/home/deg/github/bases_proyectos/Colombia.csv")
 # 
 # Guardar enformato RDS -formato recomendado pues ocupa menos espacio
-saveRDS(df.ins, file = "Colombia.RDS")
+saveRDS(df.ins, file = "/home/deg/github/bases_proyectos/Colombia.RDS")
 # Leer archivo en formato RDS 
-Colombia=readRDS(file = "Colombia.RDS")
+Colombia=readRDS(file = "/home/deg/github/bases_proyectos/Colombia.RDS")
 
 #  Listo !!!!
 # TENEMOS LA BASE DEL COVID.19 ACTUALIZADA Y ARREGLADA
+#===============================================================================

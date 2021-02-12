@@ -5,17 +5,17 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Medologia Estadistica"
-      href: about.html
-    - text: "Presentacion101"
+    - text: "Presentación 101"
       href: punidad101.html
-    - text: "Presentacion102"
+    - text: "Presentación 102"
       href: punidad102.html     
-    - text: "Presentacion103"
+    - text: "Presentación 103"
       href: punidad103.html  
-    - text: "Presentacion104"
+    - text: "Presentación 104"
       href: punidad104.html     
-    - text: "Presentacion105"
-      href: punidad105.html     
+    - text: "Presentación 105"
+      href: punidad105.html   
+    - text: "Presentación 106"
+      href: punidad106.html 
 
 
