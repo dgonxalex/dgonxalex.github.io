@@ -1,0 +1,36 @@
+---
+title: "Analiza tus datos - monitoria "
+subtitle: "Módulo 1"
+author: " "
+institute: "Manuel Luna <br/> Universidad Javeriana Cali"
+date: "2021-02-17"
+output:
+    xaringan::moon_reader:
+      css: ["default","ki-fonts","duke-blue"]
+      nature:
+        highighStyle: github
+        highlighLine: true
+        countIncrementalSlides : true
+        ratio: '16:9'
+---
+## Monitoria
+
++ Espacio de apoyo a las actividades que se estan desarrollando 
+
++ El monitor responde a interrogantes que puedan surgir del trabajo adelantado por los estudiantes, tanto tècnicos ( que resulten de uso de R o RStudio) como  conceptuales 
+
++ Este espacio se repetirà cada 15 dias 
+
++ Se recomienda que sea aprobechado, empezando el desarrollo de las actividades antes de la sesiòn dando lugar a interrogantes y preguntas
+
+---
+## Actividades 
+
+**Actividad 1** : A partir de la base de datos trabajada en las dos unidades anteriores construya un **tablero** (Dashboard)  que contenga gráficos e indicadores de las variables estadísticas contenidas  en la base de datos seleccionada en la Actividad 1 de la unidad 1.1. Realice una descripción con los resultados obtenidos en el tablero.<br/><br/>
+
+
+**Actividad 2** : Construya un **mapa mental** del Módulo 1  y adjunto el link del trabajo (en caso de ser construido en una herramienta en linea) o un pdf  que resuma los conceptos más importantes del Modulo 1. 
+
+
+
+

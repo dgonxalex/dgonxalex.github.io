@@ -103,7 +103,7 @@ t1
 ---
 ## Rango percentil
 
-<img src="sandwich.png" width="200">
+<img src="bases/sandwich.png" width="200">
 
 Es un número que divide la muestra en dos partes. $x$ % de los datos de la muestra son iguales o menores que $P_x$ y un $(100-x)$ % por encima  de el.
 

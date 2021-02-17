@@ -47,7 +47,7 @@ saveRDS(df.ins, file = "/home/deg/github/bases_proyectos/Colombia.RDS")
  # "/home/deg/github/dgonxalex.github.io/Colombia.csv"
  # Ahora pego la ruta dentro de la funcion read.csv() y le indico que me la copie
  # en un objeto
- Colombia=read.csv("/home/deg/github/bases_proyectos/Colombia.csv")
+ Colombia=read.csv(" ")
 #===============================================================================  
 #
 # REVISAR Y ARREGLAR LOS DATOS
@@ -157,3 +157,9 @@ Colombia=readRDS(file = "/home/deg/github/bases_proyectos/Colombia.RDS")
 #  Listo !!!!
 # TENEMOS LA BASE DEL COVID.19 ACTUALIZADA Y ARREGLADA
 #===============================================================================
+# submuestra Cali
+Cali=Colombia[Colombia$ciudad_municipio_nom=="CALI",]
+#-------------------------------------------------------------------------------
+# submuestra Nariño
+Nariño=Colombia[Colombia$departamento_nom=="NARIÑO",]
+

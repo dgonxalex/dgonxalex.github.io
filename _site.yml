@@ -2,20 +2,27 @@ name: "dgonzalez80"
 output_dir: "."
 navbar:
   title: "dgonzalez80"
-  left:
+  right:
     - text: "Home"
       href: index.html
-    - text: "Presentación 101"
+    - text: "About"
+      href: about.html
+    - text: "Presentacion 101"
       href: punidad101.html
-    - text: "Presentación 102"
+    - text: "Presentacion 102"
       href: punidad102.html     
-    - text: "Presentación 103"
-      href: punidad103.html  
-    - text: "Presentación 104"
-      href: punidad104.html     
-    - text: "Presentación 105"
-      href: punidad105.html   
-    - text: "Presentación 106"
-      href: punidad106.html 
+    - text: "Presentacion 103"
+      href: punidad103.html    
+    - text: "Presentacion 104"
+      href: punidad104.html
+    - text: "Presentacion 105"
+      href: punidad105.html     
+    - text: "Presentacion 106"
+      href: punidad106.html
+    - text: "Presentacion 107"
+      href: punidad107.html
+    - text: "Presentacion 108"
+      href: punidad108.html
+
 
 

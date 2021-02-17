@@ -114,22 +114,16 @@ Existen repositorio de bases de datos para uso general
 ## Base de datos
 
 ### Base datos iris (dataset R)
-```{r eval=require('DT'), tidy=FALSE, echo=FALSE}
-iris=iris
-DT::datatable(head(iris, 150),fillContainer = FALSE, options = list(pageLength = 8))
-```
-
----
-### Base de datos estudianes Probabilidad y Estadistica 2021-1
 
 ```{r  message=FALSE, echo=FALSE}
-library(DT)
-library(readxl)
-bd0052=read_excel("bases/bd0052.xlsx",sheet = "base20211", col_types = c("numeric", 
-        "numeric", "text", "text", "numeric","numeric", "text", "numeric"))
-var1=c(3,6,5,7)
-DT::datatable(head(bd0052[,var1],81),fillContainer = FALSE, options = list(pageLength = 8))
+head(iris)
 ```
+Datos de iris (de Fisher o Anderson) 
++ longitud y ancho del sépalo 
++ largo y ancho de pétalos
++ especies: setosa,  versicolor y virginica.
+
+Base de datos estadìsticos : arreglo de filas y columnas (matriz) donde por lo general las columnas representan las variables y las filas los registros de los objetos de estudio
 
 ---
 # Base de datos

@@ -26,11 +26,21 @@ class: inverse
 &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 # AGENDA
 &lt;br/&gt;
-## 1.  Dudas y Preguntas 
+## 1.  Actividad
 
-## 2. Actividad 
+## 2.  Dudas y Preguntas 
 
 ## 3. Varios
+
+---
+## Código R 
+
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+**Importar y preparar la base** &lt;br/&gt;
+https://github.com/dgonxalex/dgonxalex.github.io/blob/main/CodigoU1_1.R
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+**Construcción de tablas de frecuenciae indicadores** &lt;br/&gt;
+https://github.com/dgonxalex/dgonxalex.github.io/blob/main/CodigoU1_2.R
 
 ---
 ## Construcción de tablas 
@@ -44,6 +54,21 @@ Antes de empezar vamos a cargar la base construida en el código anterior y las 
 Colombia=readRDS(file = "/home/deg/github/bases_proyectos/Colombia.RDS")
 data(iris)
 data(cars)
+```
+
+
+```r
+head(iris)
+```
+
+```
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
 ```
 
 ---
@@ -149,7 +174,7 @@ data.frame(LI,LS,FreAbs,FreRel, FreAbAc, FreRAc)
 hist(Colombia$edad, breaks = c(0,4.9, 10.9,17.9,25.9, 58.9,115))
 ```
 
-![](punidad106_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+![](punidad106_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
   ]
 
 .panel[.panel-name[Tabla de frecuencia]
@@ -210,15 +235,6 @@ summarytools::descr(Colombia$edad)
   ]
 
 ]
----
-## Código R 
-
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
-**Importar y preparar la base** &lt;br/&gt;
-https://github.com/dgonxalex/dgonxalex.github.io/blob/main/CodigoU1_1.R
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
-**Construcción de tablas de frecuenciae indicadores** &lt;br/&gt;
-https://github.com/dgonxalex/dgonxalex.github.io/blob/main/CodigoU1_2.R
 
 ---
 

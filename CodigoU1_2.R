@@ -50,12 +50,12 @@ summary(Colombia$edad)
 # Persona Mayor (60 años o mas) envejecimiento y vejez
 
 # Constrimos la tabla a partir del histograma asi:
-h=hist(Colombia$edad, breaks = c(0,4.9, 10.9,17.9,25.9, 58.9,115))
+h=hist(Colombia$edad, breaks = c(0,4.9, 11.9,17.9,26.9, 59.9,115))
 # Con los valores contenidos en el objeto h construimos la tabla
 LI=h$breaks[1:6]
 LS=h$breaks[2:7]
 FreAbs=h$counts
-FreRel=round(h$counts/sum(h$counts),2)
+FreRel=round(h$counts/sum(h$counts),4)
 FreAbAc=cumsum(FreAbs)
 FreRAc=cumsum(FreRel)
 data.frame(LI,LS,FreAbs,FreRel, FreAbAc, FreRAc)
@@ -63,9 +63,14 @@ data.frame(LI,LS,FreAbs,FreRel, FreAbAc, FreRAc)
 # INDICADORES ESTADISTICOS
 #===============================================================================
 # VARIABLE CUALITATIVA (@)
-install.packages("modeest")
+# install.packages("modeest")
 library(modeest)
 mfv(Colombia$ubicacion)
+mfv(Colombia$ciudad_municipio_nom)
+mfv(Colombia$departamento_nom)
+
+mfv(iris$Species)
+
 #-------------------------------------------------------------------------------
 # VARIABLE CUANTITATIVA (#)
 summarytools::descr(Colombia$edad)
@@ -76,3 +81,4 @@ summarytools::descr(cars)
 
 # YA ESTAMOS LISTOS PARA INTERPRETAR LA INFORMACION PROCESADA
 #===============================================================================
+

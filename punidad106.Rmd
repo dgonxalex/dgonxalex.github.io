@@ -17,11 +17,21 @@ class: inverse
 <br/><br/><br/>
 # AGENDA
 <br/>
-## 1.  Dudas y Preguntas 
+## 1.  Actividad
 
-## 2. Actividad 
+## 2.  Dudas y Preguntas 
 
 ## 3. Varios
+
+---
+## Código R 
+
+<br/><br/><br/><br/>
+**Importar y preparar la base** <br/>
+https://github.com/dgonxalex/dgonxalex.github.io/blob/main/CodigoU1_1.R
+<br/><br/><br/>
+**Construcción de tablas de frecuenciae indicadores** <br/>
+https://github.com/dgonxalex/dgonxalex.github.io/blob/main/CodigoU1_2.R
 
 ---
 ## Construcción de tablas 
@@ -34,6 +44,10 @@ Antes de empezar vamos a cargar la base construida en el código anterior y las 
 Colombia=readRDS(file = "/home/deg/github/bases_proyectos/Colombia.RDS")
 data(iris)
 data(cars)
+```
+
+```{r}
+head(iris)
 ```
 
 ---
@@ -155,15 +169,6 @@ summarytools::descr(Colombia$edad)
   ]
 
 ]
----
-## Código R 
-
-<br/><br/><br/><br/>
-**Importar y preparar la base** <br/>
-https://github.com/dgonxalex/dgonxalex.github.io/blob/main/CodigoU1_1.R
-<br/><br/><br/>
-**Construcción de tablas de frecuenciae indicadores** <br/>
-https://github.com/dgonxalex/dgonxalex.github.io/blob/main/CodigoU1_2.R
 
 ---
 
