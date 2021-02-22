@@ -5,14 +5,13 @@ author: " "
 institute: "Daniel Enrique González Gómez <br/> Universidad Javeriana Cali"
 date: "2021-02-22"
 output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    css: ["rladies", "ki-fonts"]
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
-      ratio: '16:9'
+    xaringan::moon_reader:
+      css: ["default","ki-fonts","duke-blue"]
+      nature:
+        highighStyle: github
+        highlighLine: true
+        countIncrementalSlides : true
+        ratio: '16:9'
 ---
 class: inverse
 ```{r setup, include=FALSE}
@@ -34,7 +33,7 @@ xaringanExtra::use_panelset()
 
 ---
 # PROBABILIDAD
-
+<br/><br/><br/>
 
 ### ¿Qué es......?
 
@@ -48,7 +47,7 @@ xaringanExtra::use_panelset()
 
 ---
 # Son similares o diferentes?
-
+<br/><br/><br/>
 ###  aleatorio  - azar
 
 ###  deterministico - no deterministico
@@ -75,10 +74,12 @@ Imagine que está jugando dados con un amigo. Él indica que hay tres posibilida
 
 
 ---
-![](imagenes/nube1.png)
+
+<img src="imagenes/nube1.png" width="1000">
+
 ---
 ## CONCEPTOS BASICOS DE PROBABILIDAD
-
+<br/><br/><br/>
 ### EXPERIMENTO ALEATORIO
 
 ### ESPACIO MUESTRAL
@@ -133,6 +134,7 @@ Subconjunto del espacio muestral que es de nuestro interés.
 
 ---
 ## ENFOQUES DE PROBABILIDAD
+<br/><br/><br/>
 
 ### ENFOQUE CLÀSICO
 
@@ -177,14 +179,18 @@ Encontrar
 + $A_{5}$ : Se obtener más de 5 ensayos éxitos
 
 --
+<br/><br/><br/>
 ## ENFOQUE FRECIENTISTA
 
 Este enfoque basa su cálculo en la frecuencia con que ocurre un evento en un tamaño de muestra determinado $n$.
 
 $$\lim_{n \to{+}\infty}   P(A) =  \Bigg[ \dfrac{\text{número de veces que ocurre A}}{n} \Bigg]$$
 ---
-.pull-left[
 ## ENFOQUE SUBJETIVO
+<br/><br/><br/>
+
+.pull-left[
+
 
 En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un médico, un ingeniero, un abogado, biólogo, técnico , psicólogo, sociólogo, papá, mamá......
 ]

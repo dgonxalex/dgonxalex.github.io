@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <meta name="author" content="" />
     <meta name="date" content="2021-02-22" />
-    <link href="site_libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="site_libs/remark-css/default.css" rel="stylesheet" />
     <link href="site_libs/remark-css/ki-fonts.css" rel="stylesheet" />
+    <link href="site_libs/remark-css/duke-blue.css" rel="stylesheet" />
     <link href="site_libs/panelset/panelset.css" rel="stylesheet" />
     <script src="site_libs/panelset/panelset.js"></script>
   </head>
@@ -38,7 +39,7 @@ class: inverse
 
 ---
 # PROBABILIDAD
-
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 
 ### ¿Qué es......?
 
@@ -52,7 +53,7 @@ class: inverse
 
 ---
 # Son similares o diferentes?
-
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 ###  aleatorio  - azar
 
 ###  deterministico - no deterministico
@@ -79,10 +80,12 @@ Imagine que está jugando dados con un amigo. Él indica que hay tres posibilida
 
 
 ---
-![](imagenes/nube1.png)
+
+&lt;img src="imagenes/nube1.png" width="1000"&gt;
+
 ---
 ## CONCEPTOS BASICOS DE PROBABILIDAD
-
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 ### EXPERIMENTO ALEATORIO
 
 ### ESPACIO MUESTRAL
@@ -137,6 +140,7 @@ Subconjunto del espacio muestral que es de nuestro interés.
 
 ---
 ## ENFOQUES DE PROBABILIDAD
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 
 ### ENFOQUE CLÀSICO
 
@@ -181,14 +185,18 @@ Encontrar
 + `\(A_{5}\)` : Se obtener más de 5 ensayos éxitos
 
 --
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 ## ENFOQUE FRECIENTISTA
 
 Este enfoque basa su cálculo en la frecuencia con que ocurre un evento en un tamaño de muestra determinado `\(n\)`.
 
 `$$\lim_{n \to{+}\infty}   P(A) =  \Bigg[ \dfrac{\text{número de veces que ocurre A}}{n} \Bigg]$$`
 ---
-.pull-left[
 ## ENFOQUE SUBJETIVO
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+
+.pull-left[
+
 
 En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un médico, un ingeniero, un abogado, biólogo, técnico , psicólogo, sociólogo, papá, mamá......
 ]
@@ -245,9 +253,9 @@ Imagen tomada de : https://www.caracteristicas.co/mariposas/
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false,
+"highighStyle": "github",
+"highlighLine": true,
+"countIncrementalSlides": true,
 "ratio": "16:9"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
@@ -314,24 +322,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
       links[i].target = '_blank';
     }
   }
-})();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
+})();</script>
 
 <script>
 slideshow._releaseMath = function(el) {
