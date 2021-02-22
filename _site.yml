@@ -5,8 +5,6 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
     - text: "Presentacion 101"
       href: punidad101.html
     - text: "Presentacion 102"
