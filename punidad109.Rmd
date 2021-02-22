@@ -1,5 +1,5 @@
 ---
-title: "Unidad  1.3 <br/>Tablas de frecuencia e indicadores estadísticos "
+title: "Analiza tus datos<br/> "
 subtitle: "Módulo 1"
 author: " "
 institute: "Daniel Enrique González Gómez <br/> Universidad Javeriana Cali"
@@ -144,8 +144,21 @@ background-image: url("imagenes/summarytool1.png")
 
 ### 9.
 ---
-### 10.
-### Recursos
+### **Recursos**
+
+#### **Tablas**
+
+https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+
+http://destio.us.es/calvo/ficheros/ComoCrearTablasRMarkdown_PedroLuque_2019Sep_librodigital.pdf
+
+#### **Resumen de datos**
+
+https://cran.r-project.org/web/packages/summarytools/vignettes/Introduction.html
+
+https://mran.microsoft.com/snapshot/2018-06-06/web/packages/summarytools/vignettes/Introduction.html
+
+#### **Dashboard**
 
 http://enrdados.net/post/shiny-facil-con-flexdashboard/
 
@@ -154,7 +167,6 @@ https://rmarkdown.rstudio.com/flexdashboard/
 https://katnoria.medium.com/quick-and-easy-dashboards-c90101ba8f16
 
 ---
-
 class: inverse
 background-image: url("imagenes/Ubuntu.jpg")
 
@@ -167,7 +179,8 @@ background-image: url("imagenes/Ubuntu.jpg")
 Imagen tomada de : https://www.tandemspring.com/ubuntu/ <br/>
 problemas tomasdos de : Navidi (2006)
 
-
+---
+class: inverse
 
 
 

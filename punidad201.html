@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Unidad 2.1 Conceptos basicos y enfoque de probabilidad</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="" />
+    <meta name="date" content="2021-02-22" />
+    <link href="site_libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="site_libs/remark-css/ki-fonts.css" rel="stylesheet" />
+    <link href="site_libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="site_libs/panelset/panelset.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Unidad 2.1 Conceptos basicos y enfoque de probabilidad
+## Módulo 2
+### Daniel Enrique González Gómez <br/> Universidad Javeriana Cali
+### 2021-02-22
+
+---
+
+class: inverse
+
+
+
+&lt;br/&gt;
+# AGENDA
+&lt;br/&gt;
+## 1.  Presentación guía de aprendizaje 2.1
+
+## 2. Conceptos básicos de probabilidad
+
+## 3. Enfoques de probabilidad
+
+## 4. Varios
+
+---
+# PROBABILIDAD
+
+
+### ¿Qué es......?
+
+### ¿Cuál es su uso ......?
+
+### ¿Como se mide ......?
+
+### ¿Qué tipo de ...... existen?
+
+### ¿Qué propuedades posee  ......?
+
+---
+# Son similares o diferentes?
+
+###  aleatorio  - azar
+
+###  deterministico - no deterministico
+
+###  probable  - improbable
+
+###  cierto  - incierto
+
+---
+
+Imagine que está jugando dados con un amigo. Él indica que hay tres posibilidades de resultados al lazar dos dados:
+
++ Que los dos resultados sean pares
+
++ Que los dos resultados sean impares
+
++ Que uno sea par y el otro impar &lt;br/&gt;
+
++ Pero además afirma que estos tres eventos son igualmente probables.
+--
+&lt;br/&gt;
+&lt;br/&gt;
+¿Que opina? , ¿Cómo podrı́a verificarse o contradecir esta afirmación?
+
+
+---
+![](imagenes/nube1.png)
+---
+## CONCEPTOS BASICOS DE PROBABILIDAD
+
+### EXPERIMENTO ALEATORIO
+
+### ESPACIO MUESTRAL
+
+### EVENTO ALEATORIO
+
+
+---
+.panelset[
+  .panel[.panel-name[EXPERIMENTO ALEATORIO]
+
+Acción que puede ser replicada bajo las mismas condiciones y cuyo resultado no se conoce por anticipado
+
++ `\(E_1\)` : Lanzar una moneda dos veces y observar los resultados obtenidos en sus caras
+superiores
+
++ `\(E_2\)` : Lanzar dos dados y observar la suma de los resultados superiores
+
++ `\(E_3\)` : Realizar un examen de estadı́stica y observar el resultado obtenido
+
++ `\(E_4\)` : En una salida de campo, observo si se cumple o no, totalmente el objetivo planteado
+]
+
+ .panel[.panel-name[ESPACIO MUESTRAL]
+
+Conjunto de todos los posibles valores que puede tomar el experimento aleatorio. 
+
++ `\(S_{1}\)` = `\(\{ (cc), (cs), (sc), (ss) \}\)`  
+
++ `\(S_{2}\)` = `\(\{ 2,3,4,5,6,7,8,9,10,11,12 \}\)` 
+
++ `\(S_{3}\)` = `\(\{ x \in \mathbb{R} | 0 \leq x \leq 5   \}\)` 
+
++ `\(S_{4}\)` = `\(\{ x \in \mathbb{N}| 0 \leq x \leq 1 \}\)` 
+
++ `\(S_{5}\)` = `\(\{ x \in \mathbb{N}| 0 \leq x \leq 20 \}\)`
+
+]
+
+.panel[.panel-name[EVENTO ALEATORIO]
+
+			
+Subconjunto del espacio muestral que es de nuestro interés. 
+
++ `\(A_{1}\)` : Se obtienen solo caras  
+
++ `\(A_{2}\)` : La suma de los resultados es inferior a 6
+
++ `\(A_{3}\)` : Se gana el examen 
+
++ `\(A_{4}\)` : Se cumple el objetivo de la salida 
+
++ `\(A_{5}\)`: Se obtener más de 5 ensayos éxitos
+]
+]
+
+---
+## ENFOQUES DE PROBABILIDAD
+
+### ENFOQUE CLASICO
+
+### ENFOQUE FRECIENTISTA
+
+### ENFOQUE SUBJETIVO
+
+---
+## ENFOQUE CLASICO
+
+Es el enfoque más antiguo de probabilidad. La probabilidad bajo ese enfoque para el evento A se calcula como:
+
+`\(P(A) = \dfrac{n(A)}{n(S)}\)`
+
+
+Para : 
++ `\(E_1\)` : Lanzar una moneda dos veces y observar los resultados obtenidos en sus caras
+superiores
+
++ `\(E_2\)` : Lanzar dos dados y observar la suma de los resultados superiores 
+
+y
++ `\(A_{1}\)`: Se obtienen solo caras   
+
++ `\(A_{2}\)`: La suma de los resultados es inferior a 6
+	
+Encontrar	 
+
++ `\(P(A_{1}) =\)` ?  
++	`\(P(A_{2}) =\)` ? 
+
+---
+## Como calcular las siguientes probabilidades ?
+
++ `\(A_{3}\)` : Se gana el examen  
+
++ `\(A_{4}\)` : Se cumple el objetivo de la salida  
+
++ `\(A_{5}\)` : Se obtener más de 5 ensayos éxitos
+
+--
+## ENFOQUE FRECIENTISTA
+
+Este enfoque basa su cálculo en la frecuencia con que ocurre un evento en un tamaño de muestra determinado `\(n\)`.
+
+`$$\lim_{n \to{+}\infty}   P(A) =  \Bigg[ \dfrac{\text{número de veces que ocurre A}}{n} \Bigg]$$`
+---
+.pull-left[
+## ENFOQUE SUBJETIVO
+
+En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un médico, un ingeniero, un abogado, biólogo, técnico , psicólogo, sociólogo, papá, mamá......
+]
+
+.pull-rigt[
+
+&lt;img src="imagenes/sinsom.jpg" width="200"&gt;
+
+]
+---
+AXIOMAS DE PROBABILIDAD
+
++ `\(A_{1}\)`:  Sea `\(S\)` un espacio muestral  asociado a un experimento. Entonces `\(P(S)=1\)` 
+
++ `\(A_{2}\)`:  Para cualquier evento `\(A\)`, se cumple que `\(0 \leq P(A) \leq 1\)`  
+
++ `\(A_{3}\)`:  Si `\(A\)` y `\(B\)` son dos eventos mutuamente excluyentes, entonces: 
+`$$P(A \cup B) = P(A) + P(B)$$` 
+
+En general `\(P(A \cup B) = P(A)+ P(B) - P(A \cap B)\)`   
+
++ `\(A_{4}\)`: Para cualquier evento `\(A\)`, $P(A^c)=1-P(A) $  
+
++ `\(A_{5}\)`: La probabilidad de `\(P(\phi) =0\)`   
+
+---
+## PROBLEMAS PROPUESTOS
+
++ Determine la probabilidad de que en una mano de poker obtenga 21 con tres cartas seleccionadas de manera aleatoria.
+&lt;br/&gt;&lt;br/&gt;
++ Determine la probabilidad de que al destapar una ficha de dominó, sus puntos sean mayores a 4
+&lt;br/&gt;&lt;br/&gt;
++ Determine la probabilidad de que al lanzar dos dados:
+
+   + a. la suma de los resultados sea mayor a 7
+
+   + b. la resta de los números sea negativa
+
+   + c. su multiplicación sea mayor a 20
+
+   + d. en el caso de agregar otro dado (en total 3 dados), la suma esté entre 10 y 15
+
+---
+class: inverse center
+background-image: url("imagenes/mariposa.jpg")
+
+	&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+	&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+		&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;	&lt;br/&gt;&lt;br/&gt;
+	
+##### &lt;p style="color:yellow"&gt; No intentes cambiar tu pasado, puede que de haber sido distinto todo hubiera sido peor... ( Efecto mariposa )
+Imagen tomada de : https://www.caracteristicas.co/mariposas/
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
