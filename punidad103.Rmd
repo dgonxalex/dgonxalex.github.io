@@ -33,11 +33,13 @@ Pasos:
 + Selecciono una base de datos de mi interés (portal **FiveThirtyEight**: https://data.fivethirtyeight.com/ - base de datos Predicción de clubes de  fútbol)
 + Descargo la base de datos y la guardo en la carpeta de trabajo
 + Importo la base a RStudio 
-```{r}
+```{r, echo=TRUE, warning=FALSE, message=FALSE, results='hide'}
 library(DT)
 clasificacion=read.csv("bases/spi_global_rankings_intl.csv")
 DT::datatable(head(clasificacion, 218),fillContainer = FALSE, options = list(pageLength = 3))
 ```
+
+<img src="imagenes/tabla7.png" width="600">
 
 Recuerda que hemos visto varias formas de hacerlo. 
 ---

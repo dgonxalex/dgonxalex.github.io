@@ -147,7 +147,7 @@ labs=c("Ing. Industrial","Administración ","Contaduría ")
 boxplot((nf~cc),main="Nota final matemáticas fundamentales por carrera", col="dodgerblue3"); abline(h=3, col="red"); abline(h=4, col="blue")
 ```
   ]  
-.panel[.panel-name[Diag.de Dispersion]
+.panel[.panel-name[Diag.de Dispersiòn]
 ```{r, fig.height=5}
 ed=round(rnorm(90,18,1),1)
 plot(ed,nf, main="Edad vs Nota final matemáticas fundamentales", ylim = c(0,5), xlab = "Edad", ylab = "Nota final",col="dodgerblue3",pch=19)

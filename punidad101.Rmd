@@ -152,24 +152,28 @@ Existen repositorio de bases de datos para uso general
 ## Base de datos
 
 ### Base datos iris (dataset R)
-```{r eval=require('DT'), tidy=FALSE, echo=FALSE}
+```{r eval=FALSE}
 iris=iris
 DT::datatable(head(iris, 150),fillContainer = FALSE, options = list(pageLength = 8))
 ```
 
+<img src="imagenes/tabla5.png" width="700">
+
 ---
 ### Base de datos estudianes Probabilidad y Estadistica 2021-1
 
-```{r  message=FALSE, echo=FALSE}
+```{r , eval=FALSE}
 library(DT)
 library(readxl)
-bd0052 <- read_excel("bases/bd0052.xlsx", sheet = "base20211", col_types = c("numeric", 
+bd0052 = read_excel("bases/bd0052.xlsx", sheet = "base20211", col_types = c("numeric", 
         "numeric", "text", "text", "numeric","numeric", "text", "numeric"))
 attach(bd0052)
 var1=c(3,6,5,7)
 DT::datatable(head(bd0052[,var1],81),fillContainer = FALSE, options = list(pageLength = 8))
 ```
 
+
+<img src="imagenes/tabla6.png" width="600">
 ---
 # Etapas del proceso de datos
 

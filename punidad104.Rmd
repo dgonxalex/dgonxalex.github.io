@@ -115,7 +115,7 @@ Es un número que divide la muestra en dos partes. $x$ % de los datos de la mues
 ---
 ## Diagrama de cajas 
 
-```{r, warning=FALSE, message=FALSE, fig.height=4} 
+```{r, warning=FALSE, message=FALSE, fig.height=2, fig.width=10.7} 
 library(ggplot2);bd0052[23,5]=5.1; bd0052[24,5]=2.6; ggplot(bd0052, aes(x=promacum))+geom_boxplot()
 
 
@@ -221,9 +221,11 @@ median(bd0052$promacum,na.rm = TRUE)
 ```
 ]
 .pull-right[
-```{r, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE, fig.height=5, fig.width=4}
 boxplot(bd0052$promacum)
+grid()
 ```
+
 La **Me** corresponde a la linea central de a caja en el diagrama de cajas
 ]
 ---
