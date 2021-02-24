@@ -131,7 +131,7 @@ Un experimento que busca estudiar la relación que puede existir entre el habito
 n=c(21,48,36,26,30,19); 
 m3=matrix(n,nrow = 2)
 rownames(m3)=c("con hipertension", "sin hipertension")
-colnames(m3)=c("fumador", "fumador moderado", "fumador empedernido")
+colnames(m3)=c("no fumador", "fumador moderado", "fumador empedernido")
 round(addmargins(prop.table(m3), c(1, 2)), 4)
 ```
 
