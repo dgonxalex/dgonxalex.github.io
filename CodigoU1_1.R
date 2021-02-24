@@ -47,7 +47,7 @@ saveRDS(df.ins, file = "/home/deg/github/bases_proyectos/Colombia.RDS")
  # "/home/deg/github/dgonxalex.github.io/Colombia.csv"
  # Ahora pego la ruta dentro de la funcion read.csv() y le indico que me la copie
  # en un objeto
- Colombia=read.csv(" ")
+ Colombia=read.csv("/home/deg/github/Proyectos/dgonzalez80.github.io/Colombia.RDS")
 #===============================================================================  
 #
 # REVISAR Y ARREGLAR LOS DATOS

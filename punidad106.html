@@ -88,10 +88,10 @@ cbind(FrecAbs,FreRel)
 
 ```
 ##              FrecAbs      FreRel
-## casa         2092220 0.963188611
-## fallecido      56983 0.026233081
-## hospital       19541 0.008996027
-## hospital uci    3437 0.001582281
+## casa         2142038 0.964150183
+## fallecido      58974 0.026544717
+## hospital       17901 0.008057398
+## hospital uci    2772 0.001247702
 ```
 ]
   .panel[.panel-name[Opcion 2]
@@ -105,12 +105,12 @@ summarytools::freq(Colombia$ubicacion,big.mark = ",", cumul = FALSE, headings = 
 ## 
 ##                           Freq   % Valid   % Total
 ## ------------------ ----------- --------- ---------
-##               casa   2,092,220     96.32     95.99
-##          fallecido      56,983      2.62      2.61
-##           hospital      19,541      0.90      0.90
-##       hospital uci       3,437      0.16      0.16
-##               &lt;NA&gt;       7,460                0.34
-##              Total   2,179,641    100.00    100.00
+##               casa   2,142,038     96.42     96.07
+##          fallecido      58,974      2.65      2.64
+##           hospital      17,901      0.81      0.80
+##       hospital uci       2,772      0.12      0.12
+##               &lt;NA&gt;       7,978                0.36
+##              Total   2,229,663    100.00    100.00
 ```
   ]
 .panel[.panel-name[Tablas cruzadas]
@@ -122,10 +122,10 @@ table(Colombia$ubicacion, Colombia$estado)
 ```
 ##               
 ##                fallecido   grave    leve moderado
-##   casa                 0       0 2092220        0
-##   fallecido        56983       0       0        0
-##   hospital             0       0       0    19541
-##   hospital uci         0    3437       0        0
+##   casa                 0       0 2142038        0
+##   fallecido        58974       0       0        0
+##   hospital             0       0       0    17901
+##   hospital uci         0    2772       0        0
 ```
   ]  
 ]
@@ -211,7 +211,7 @@ summary(Colombia$edad)
 
 ```
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    1.00   27.00   38.00   40.23   53.00  114.00
+##    1.00   27.00   38.00   40.25   53.00  114.00
 ```
 ]
   .panel[.panel-name[Opción 2]
@@ -222,7 +222,7 @@ psych::describe(Colombia$edad)
 
 ```
 ##    vars       n  mean    sd median trimmed   mad min max range skew kurtosis   se
-## X1    1 2179641 40.23 18.14     38   39.33 17.79   1 114   113 0.45    -0.18 0.01
+## X1    1 2229663 40.25 18.16     38   39.35 17.79   1 114   113 0.45    -0.18 0.01
 ```
   ]
 
