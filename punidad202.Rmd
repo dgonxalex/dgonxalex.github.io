@@ -189,10 +189,20 @@ class: inverse
 
 Las siguientes figuras representan dos sistemas eléctricos,conectados en diferentes formas. Se tiene informacion que todos los componentes poseen igual probabilidad de falla ( $P(F)=0.05$ ). En cada caso determine la probabilidad de funcionamiento de cada sistema
 
-<img src="imagenes/circuito1.png" width="200"> <br/><br/><br/>
+.pull-left[
+<img src="imagenes/circuito1.png" width="200"> 
+<br/><br/>
+Caso dispositivos en serie:<br/>
+$P(A∩ B)=P(A)\times P(B)=0.95*0.95=0.9025$
+]
+.pull-rigght[
 <img src="imagenes/circuito2.png" width="130"> 
-
-```
+<br/><br/>
+Caso dispositivos en paralelo:<br/>
+$1-P(A∩ B)=P(A^c)\times(B^c)=1-0.05x0.05=0.9975$
+]
+<br/><br/>
+Por tal razón la fiabilidad del sistema en paralelo es mayor a la del sistema en serie
 ---
 class: inverse
 
