@@ -13,22 +13,23 @@
 
 <title>Resultados de la practica U1.3</title>
 
-<script src="site_libs/jquery/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap/shim/respond.min.js"></script>
-<script src="site_libs/navigation/tabsets.js"></script>
-<link href="site_libs/highlightjs/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs/highlight.js"></script>
-<script src="site_libs/htmlwidgets/htmlwidgets.js"></script>
-<script src="site_libs/plotly-binding/plotly.js"></script>
-<script src="site_libs/typedarray/typedarray.min.js"></script>
-<link href="site_libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
-<script src="site_libs/crosstalk/js/crosstalk.min.js"></script>
-<link href="site_libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="site_libs/plotly-main/plotly-latest.min.js"></script>
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.9.2.2/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -327,6 +328,9 @@ $(document).ready(function () {
 <li>
   <a href="punidad202.html">Presentacion 202</a>
 </li>
+<li>
+  <a href="punidad203.html">Presentacion 203</a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -342,7 +346,7 @@ $(document).ready(function () {
 
 
 <div id="column" class="section level2" data-width="650">
-<h2>Column</h2>
+<h2 data-width="650">Column</h2>
 <div id="comportamiento-de-los-desempeños-durante-los-últimos-20-periodos" class="section level3">
 <h3>COMPORTAMIENTO DE LOS DESEMPEÑOS DURANTE LOS ÚLTIMOS 20 PERIODOS</h3>
 <pre class="r"><code>library(plotly)
@@ -370,12 +374,12 @@ p3</code></pre>
 ## No trace type specified:
 ##   Based on info supplied, a &#39;scatter&#39; trace seems appropriate.
 ##   Read more about this trace type -&gt; https://plot.ly/r/reference/#scatter</code></pre>
-<div id="htmlwidget-02321485a47c3e8b59df" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-02321485a47c3e8b59df">{"x":{"visdat":{"8e57a6f0bc":["function () ","plotlyVisDat"]},"cur_data":"8e57a6f0bc","attrs":{"8e57a6f0bc":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"serie 0","mode":"lines","inherit":true},"8e57a6f0bc.1":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"serie 1","mode":"lines+markers","inherit":true},"8e57a6f0bc.2":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"serie 2","mode":"markers","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Comparacion de resultados ultimos 2 meses","xaxis":{"domain":[0,1],"automargin":true,"title":"periodo"},"yaxis":{"domain":[0,1],"automargin":true,"title":"indicadores"},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[4.80971153689935,4.44908543566111,2.8296994604232,5.15642614866805,4.94890767074743,4.56503992889649,3.24244906818754,4.81267032346303,4.34244636307306,3.30239701467482,4.25263712847943,0.178232314131558,3.93855884742652,1.64526696390762,3.40130480253796],"name":"serie 0","mode":"lines","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[4.05543081799138,3.39879547738808,6.04732334889585,2.88998093509716,3.34124385606948,4.17705601067253,3.19348797818425,4.31868203477574,3.40108103745802,4.24065035015884,3.35109294307692,4.89979089104213,4.83817200375594,3.75675017025534,3.67470395434103],"name":"serie 1","mode":"lines+markers","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[3.55712755059957,3.10753534195626,5.61267846465807,2.56690377849258,5.58057131253929,2.67311451321107,5.1259688932271,3.81477686447462,4.80673754619505,3.69993633313221,3.20123585280269,3.31589949816734,3.12996341775833,5.3826927464184,4.13516490523736],"name":"serie 2","mode":"markers","type":"scatter","marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"line":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c1676584c4d601bf0fd9" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c1676584c4d601bf0fd9">{"x":{"visdat":{"bb4f5bdfe75b":["function () ","plotlyVisDat"]},"cur_data":"bb4f5bdfe75b","attrs":{"bb4f5bdfe75b":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"serie 0","mode":"lines","inherit":true},"bb4f5bdfe75b.1":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"serie 1","mode":"lines+markers","inherit":true},"bb4f5bdfe75b.2":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"serie 2","mode":"markers","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Comparacion de resultados ultimos 2 meses","xaxis":{"domain":[0,1],"automargin":true,"title":"periodo"},"yaxis":{"domain":[0,1],"automargin":true,"title":"indicadores"},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[3.84927669253293,3.34560384493621,4.41233912776404,5.06173258115971,1.65939303418159,1.93456472362939,1.80021430385156,2.18438303791162,4.027108118152,3.4003416400273,4.04286187380749,3.03840675280175,4.51032362932699,2.56916988455886,2.74939779956247],"name":"serie 0","mode":"lines","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[2.71973078070443,2.47525147128317,4.59181651650611,4.80127827573369,2.54224866104579,3.50085314703412,3.26596418648703,4.37156107150986,2.85091489830323,3.55592881638547,3.38450330673536,2.98155428821587,4.39656572185241,3.33247546364422,4.56271654739476],"name":"serie 1","mode":"lines+markers","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[4.21529777223216,5.2793431723268,3.63804830752856,3.13726360036069,3.67843757342903,4.00063221198268,4.50849810499943,4.67180857312504,1.72193923564135,3.90989471947055,4.18257474878305,3.28580523772845,3.31566665087469,6.37170300175002,3.37583520641199],"name":"serie 2","mode":"markers","type":"scatter","marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"line":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="column-1" class="section level2" data-width="350">
-<h2>Column</h2>
+<h2 data-width="350">Column</h2>
 <div id="chart-b" class="section level3">
 <h3>Chart B</h3>
 <pre class="r"><code>library(ggplot2)

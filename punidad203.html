@@ -1,154 +1,155 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Unidad 1.1 Bases de datos</title>
+    <title>Unidad 2.1 Conceptos básicos y enfoque de probabilidad</title>
     <meta charset="utf-8" />
-    <meta name="date" content="2021-02-05" />
+    <meta name="author" content="Daniel Enrique González Gómez" />
+    <meta name="date" content="2021-02-26" />
     <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
     <link href="site_libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="site_libs/remark-css-0.0.1/ki-fonts.css" rel="stylesheet" />
     <link href="site_libs/remark-css-0.0.1/duke-blue.css" rel="stylesheet" />
+    <link href="site_libs/panelset-0.2.4/panelset.css" rel="stylesheet" />
+    <script src="site_libs/panelset-0.2.4/panelset.js"></script>
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Unidad 1.1 Bases de datos
-## Módulo 1
-### 
-### Daniel Enrique González Gómez <br/> Universidad Javeriana Cali
-### 2021-02-05
+# Unidad 2.1 Conceptos básicos y enfoque de probabilidad
+### Daniel Enrique González Gómez
+### Universidad Javeriana Cali
+### 2021-02-26
 
 ---
 
 class: inverse
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+
+
+&lt;br/&gt;
 # AGENDA
-&lt;br/&gt;&lt;br/&gt;
-## 1.  Dudas y preguntas
+&lt;br/&gt;
+## 1. Dudas y preguntas
 
-## 2. Actividad 1
+## 2. Problemas propuestos
 
-## 3. Cargar  de datos en RStudio
-
-## 4. Varios
-
----
-## Importar una base de datos en formato csv
-
-Pasos:
-
-+ Selecciono una base de datos de mi interés (portal **FiveThirtyEight**: https://data.fivethirtyeight.com/ - base de datos Predicción de clubes de  fútbol)
-+ Descargo la base de datos y la guardo en la carpeta de trabajo
-+ Importo la base a RStudio 
-
-```r
-library(DT)
-clasificacion=read.csv("bases/spi_global_rankings_intl.csv")
-DT::datatable(head(clasificacion, 218),fillContainer = FALSE, options = list(pageLength = 3))
-```
-
-&lt;img src="imagenes/tabla7.png" width="600"&gt;
-
-Recuerda que hemos visto varias formas de hacerlo. 
----
-
-+ Reviso la base de datos para poder detectar si presenta inconsistencias
-
-
-```r
-summary(clasificacion[,1:6])
-```
-
-```
-##       rank            name              confed               off             def              spi       
-##  Min.   :  1.00   Length:218         Length:218         Min.   :0.200   Min.   :0.3200   Min.   : 0.26  
-##  1st Qu.: 55.25   Class :character   Class :character   1st Qu.:0.690   1st Qu.:0.9225   1st Qu.:19.90  
-##  Median :109.50   Mode  :character   Mode  :character   Median :1.075   Median :1.3150   Median :37.91  
-##  Mean   :109.50                                         Mean   :1.166   Mean   :1.6692   Mean   :39.58  
-##  3rd Qu.:163.75                                         3rd Qu.:1.540   3rd Qu.:2.0100   3rd Qu.:58.80  
-##  Max.   :218.00                                         Max.   :3.540   Max.   :6.0800   Max.   :93.99
-```
-
----
-+ Otra forma de realizar el proceso es:
-
-
-```r
-summarytools::descr(clasificacion)
-```
-
-```
-## Descriptive Statistics  
-## 
-##                        def      off     rank      spi
-## ----------------- -------- -------- -------- --------
-##              Mean     1.67     1.17   109.50    39.58
-##           Std.Dev     1.12     0.66    63.08    24.61
-##               Min     0.32     0.20     1.00     0.26
-##                Q1     0.92     0.69    55.00    19.77
-##            Median     1.31     1.08   109.50    37.91
-##                Q3     2.02     1.54   164.00    58.82
-##               Max     6.08     3.54   218.00    93.99
-##               MAD     0.67     0.62    80.80    29.88
-##               IQR     1.09     0.85   108.50    38.90
-##                CV     0.67     0.56     0.58     0.62
-##          Skewness     1.77     0.82     0.00     0.15
-##       SE.Skewness     0.16     0.16     0.16     0.16
-##          Kurtosis     3.01     0.54    -1.22    -0.94
-##           N.Valid   218.00   218.00   218.00   218.00
-##         Pct.Valid   100.00   100.00   100.00   100.00
-```
-
----
-- Tambien :
-
-
-```r
-View(summarytools::dfSummary(clasificacion))
-```
-
-&lt;img src="imagenes/dfSummary.png" width="500"&gt;
-
----
-## Rcmdr
-Este paquete de R permite cargar otra interz grafica de usuarios que utiliza ventanas en lugar de comandos
-
-
-```r
-# install.packages("Rcmdr", dependencies = TRUE)
-# install.packages("RcmdrMisc", dependencies = TRUE)
-library(Rcmdr)
-library(RcmdrMisc)
-# Commander()  # en caso de cerrarlo y querer abrirlo nuevamente
-```
-
-![](imagenes/Rcmdr.png)
-Revisalo !
-
-Ayuda: Tutorial Cómo Utilizar RCommander :https://www.youtube.com/watch?v=_aTYtNflcxU 
-
-
----
-## Otros portales de datos abiertos
-
-+ **kaggle**    https://www.kaggle.com
-
-+ **FiveThirtyEight**    https://data.fivethirtyeight.com/
-
-+ **Datos abiertos Cali**  https://datos.cali.gov.co/
+## 3. Varios
 
 ---
 class: inverse
-background-image: url("imagenes/railway-1555348_1920.jpg")
 
-	&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
-# &lt;p style="color:yellow"&gt; Sigamos adelante... &lt;/p&gt;
+.left-column[
+## Tipos de probabilidad
+]
+.right-column[
+&lt;img src="imagenes/tabla2031.png" width="1100"&gt;
+]
+---
+class: inverse
+&lt;img src="imagenes/arbol2031.png" width="800"&gt;
+---
+class: inverse
+&lt;img src="imagenes/venn.png" width="700"&gt;
 
-## &lt;p style="color:yellow"&gt; Daniel Enrique González Gómez &lt;/p&gt;
+---
+class: inverse center middle
 
-Imagen tomada de :https://pixabay.com/es/images/search/paisaje/
+## PROBLEMAS PROPUESTOS
+---
+### 1.
+Una compañia de seguros de automóviles trabaja con cuatro modelos de autos: `\(M_1\)` , `\(M_2\)` , `\(M_3\)` y `\(M_4\)` . Con información disponible del último año se ha elaborado la siguiente tabla:
 
+.pull-left[
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;&lt;/h1&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;
+        &lt;/strong&gt;Modelo&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Proporcion de vehiculos&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Probabilidad de accidente&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Modelo1&lt;/td&gt;
+          &lt;td&gt;0.27&lt;/td&gt;
+          &lt;td&gt;0.03&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Modelo2&lt;/td&gt;
+          &lt;td&gt;0.17&lt;/td&gt;
+          &lt;td&gt;0.02&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Modelo3&lt;/td&gt;
+          &lt;td&gt;0.35&lt;/td&gt;
+          &lt;td&gt;0.05&lt;/td&gt;
+        &lt;/tr&gt;
+         &lt;tr&gt;
+          &lt;td&gt;Modelo4&lt;/td&gt;
+          &lt;td&gt;0.21&lt;/td&gt;
+          &lt;td&gt;0.04&lt;/td&gt;
+        &lt;/tr&gt;       
+          &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+]
+.pull-right[
+
+A partir de la informacion anterior :
+
++ Construya un diagrama de arbol
+
++ Construya una tabla cruzada
+
++ Construya un diagrama de Venn
+]
+
+---
+### 2.
+Un día de grados en la universidad, se selecciona aleatoriamente a un graduado. Sea **A** el evento que el estudiante está por terminar la carrera de ingeniería y sea **B** el
+evento que el estudiante tomó un curso de cálculo en la universidad. 
+
+¿Qué probabilidad es mayor, `\(P(A⏐B)\)` o `\(P(B⏐A)\)`? . Explique. (Problema tomado de Navidi(2006))
+---
+### 3.
+Los pozos de petróleo perforados en la región **A** tienen una probabilidad de 0.2 de producir. Los pozos perforados en la región **B** tienen una probabilidad de 0.09. Se perfora un pozo en cada región. Suponga que los pozos producen de manera independiente.
+
++ a) ¿Cuál es la probabilidad de que ambos pozos produzcan?
+
++ b) ¿Cuál es la probabilidad de que ninguno produzca?
+
++ c) ¿Cuál es la probabilidad de que al menos uno produzca?
+---
+### 4.
+Determine la probabilidad de que al destapar una ficha de dominó, sus puntos sean mayores a 4
+
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;img src="imagenes/domino.jpg" width="300"&gt;
+---
+### 5.
+Determine la probabilidad de que al lanzar dos dados:
+
++ a. La suma de los resultados sea mayor a 7
+
++ b. La resta de los números sea negativa
+
++ c. Su multiplicación sea mayor a 20 
+
++ d. El resultado del dado1 sea mayor al del dado2 (existe un juego llamado guayabita que consiste en lanzar un dado y apostar dependiendo del resultado obtenido, pues se gana lo apostado si el segundo lanzamiento es mayor al valor obtenido en el primero)
+
++ e. En el caso de agregar otro dado (en total 3 dados), la suma esté entre 10 y 15
+---
+class: inverse
+
+---
+class: inverse right
+background-image: url("imagenes/city-438393_1920.jpg")
+### &lt;p style="color:blue"&gt; Si quieres resultados diferentes, no hagas siempre lo misno...&lt;/br&gt;&lt;/br&gt;Albert Einstein &lt;/p&gt;
+Imagen tomada de : https://pixabay.com/es/images/search/paisaje/
 
 
 

@@ -15,7 +15,7 @@ output:
 ---
 class: inverse
 ```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
+options(htmltools.dir.version = TRUE)
 xaringanExtra::use_panelset()
 ```
 
@@ -193,7 +193,7 @@ Las siguientes figuras representan dos sistemas eléctricos,conectados en difere
 <img src="imagenes/circuito1.png" width="200"> 
 <br/><br/>
 Caso dispositivos en serie:<br/>
-$P(A∩B)=P(A)*P(B)=0.95*0.95=0.9025$
+$P(A∩B) = P(A) * P(B) = 0.95 * 0.95 = 0.9025$
 ]
 .pull-rigght[
 <img src="imagenes/circuito2.png" width="130"> 
@@ -203,9 +203,6 @@ $1-P(A'∩ B')=P(A')*(B')=1-0.05x0.05=0.9975$
 ]
 <br/><br/>
 Por tal razón la fiabilidad del sistema en paralelo es mayor a la del sistema en serie
----
-class: inverse
-
 ---
 
 class: inverse right
