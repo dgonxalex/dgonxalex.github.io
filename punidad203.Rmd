@@ -30,19 +30,16 @@ xaringanExtra::use_panelset()
 
 ---
 class: inverse
-
-.left-column[
 ## Tipos de probabilidad
-]
-.right-column[
-<img src="imagenes/tabla2031.png" width="1100">
-]
+
+<img src="imagenes/tabla2031.png" width="900">
+
 ---
 class: inverse
-<img src="imagenes/arbol2031.png" width="800">
+<img src="imagenes/arbol2031.png" width="900">
 ---
 class: inverse
-<img src="imagenes/venn.png" width="700">
+<img src="imagenes/venn.png" width="900">
 
 ---
 class: inverse center middle
@@ -121,7 +118,8 @@ Los pozos de petróleo perforados en la región **A** tienen una probabilidad de
 Determine la probabilidad de que al destapar una ficha de dominó, sus puntos sean mayores a 4
 
 <br/><br/><br/>
-<img src="imagenes/domino.jpg" width="300">
+<img src="imagenes/domino.jpg" width="400"><br/></br>
+Imagen tomada de : https://sp.depositphotos.com/vector-images/domino.html
 ---
 ### 5.
 Determine la probabilidad de que al lanzar dos dados:
@@ -135,6 +133,8 @@ Determine la probabilidad de que al lanzar dos dados:
 + d. El resultado del dado1 sea mayor al del dado2 (existe un juego llamado guayabita que consiste en lanzar un dado y apostar dependiendo del resultado obtenido, pues se gana lo apostado si el segundo lanzamiento es mayor al valor obtenido en el primero)
 
 + e. En el caso de agregar otro dado (en total 3 dados), la suma esté entre 10 y 15
+
+<img src="imagenes/dados.jpg" width="150"><br/></br>
 ---
 class: inverse
 
