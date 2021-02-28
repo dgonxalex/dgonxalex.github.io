@@ -2,30 +2,40 @@ name: "dgonzalez80"
 output_dir: "."
 navbar:
   title: "dgonzalez80"
-  right:
+  left:
     - text: "Home"
+      icon: fa-home
       href: index.html
-    - text: "Presentacion 101"
-      href: punidad101.html
-    - text: "Presentacion 102"
-      href: punidad102.html     
-    - text: "Presentacion 103"
-      href: punidad103.html    
-    - text: "Presentacion 104"
-      href: punidad104.html
-    - text: "Presentacion 105"
-      href: punidad105.html     
-    - text: "Presentacion 106"
-      href: punidad106.html
-    - text: "Presentacion 107"
-      href: punidad107.html
-    - text: "Presentacion 108"
-      href: punidad109.html
-    - text: "Presentacion 109"
-      href: punidad109.html
-    - text: "Presentacion 201"
-      href: punidad201.html
-    - text: "Presentacion 202"
-      href: punidad202.html
-    - text: "Presentacion 203"
-      href: punidad203.html
+    - text: "About"
+      icon: fa-inf
+      href: about.html
+    - text: "Modulos"
+      icon: fa-gear
+      menu:
+         - text: "Modulo 1"
+         - text: "Presentacion101"
+           href: punidad101.html
+         - text: "Presentacion102"
+           href: punidad102.html
+         - text: "Presentacion103"
+           href: punidad103.html    
+         - text: "Presentacion 104"
+           href: punidad104.html
+         - text: "Presentacion 105"
+           href: punidad105.html     
+         - text: "Presentacion 106"
+           href: punidad106.html
+         - text: "Presentacion 107"
+           href: punidad107.html
+         - text: "Presentacion 108"
+           href: punidad109.html
+         - text: "Presentacion 109"
+           href: punidad109.html
+         - text: "---------"
+         - text: "Modulo 2"
+         - text: "Presentacion 201"
+           href: punidad201.html
+         - text: "Presentacion 202"
+           href: punidad202.html
+         - text: "Presentacion 203"
+           href: punidad203.html

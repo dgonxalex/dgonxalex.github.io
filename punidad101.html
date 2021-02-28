@@ -3,11 +3,13 @@
   <head>
     <title>Unidad 1.1 Bases de datos</title>
     <meta charset="utf-8" />
-    <meta name="author" content="" />
     <meta name="date" content="2021-02-01" />
+    <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
     <link href="site_libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="site_libs/remark-css-0.0.1/ki-fonts.css" rel="stylesheet" />
     <link href="site_libs/remark-css-0.0.1/duke-blue.css" rel="stylesheet" />
+    <link href="site_libs/panelset-0.2.4/panelset.css" rel="stylesheet" />
+    <script src="site_libs/panelset-0.2.4/panelset.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -15,6 +17,7 @@ class: center, middle, inverse, title-slide
 
 # Unidad 1.1 Bases de datos
 ## Módulo 1
+### 
 ### Daniel Enrique González Gómez <br/> Universidad Javeriana Cali
 ### 2021-02-01
 
@@ -59,23 +62,23 @@ Análisis de datos para la toma de decisiones
 
 .pull-left[
 
-|            |       value|
-|:-----------|-----------:|
-|Mean        |   3.8650000|
-|Std.Dev     |   0.3607868|
-|Min         |   3.3400000|
-|Q1          |   3.5500000|
-|Median      |   3.8300000|
-|Q3          |   4.1600000|
-|Max         |   4.8300000|
-|MAD         |   0.4299540|
-|IQR         |   0.6100000|
-|CV          |   0.0933472|
-|Skewness    |   0.5033477|
-|SE.Skewness |   0.2689090|
-|Kurtosis    |  -0.5760274|
-|N.Valid     |  80.0000000|
-|Pct.Valid   | 100.0000000|
+|            |   value|
+|:-----------|-------:|
+|Mean        |   3.865|
+|Std.Dev     |   0.361|
+|Min         |   3.340|
+|Q1          |   3.550|
+|Median      |   3.830|
+|Q3          |   4.160|
+|Max         |   4.830|
+|MAD         |   0.430|
+|IQR         |   0.610|
+|CV          |   0.093|
+|Skewness    |   0.503|
+|SE.Skewness |   0.269|
+|Kurtosis    |  -0.576|
+|N.Valid     |  80.000|
+|Pct.Valid   | 100.000|
 ]
 .pull-right[
 
@@ -114,6 +117,10 @@ Existen repositorio de bases de datos para uso general
 
 ### Base datos iris (dataset R)
 
+
+```r
+head(iris)
+```
 
 ```
 ##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
@@ -160,7 +167,6 @@ Existen repositorio de bases de datos para uso general
 ### Base datos iris (dataset R)
 
 ```r
-iris=iris
 DT::datatable(head(iris, 150),fillContainer = FALSE, options = list(pageLength = 8))
 ```
 
@@ -171,11 +177,6 @@ DT::datatable(head(iris, 150),fillContainer = FALSE, options = list(pageLength =
 
 
 ```r
-library(DT)
-library(readxl)
-bd0052 = read_excel("bases/bd0052.xlsx", sheet = "base20211", col_types = c("numeric", 
-        "numeric", "text", "text", "numeric","numeric", "text", "numeric"))
-attach(bd0052)
 var1=c(3,6,5,7)
 DT::datatable(head(bd0052[,var1],81),fillContainer = FALSE, options = list(pageLength = 8))
 ```
@@ -185,10 +186,11 @@ DT::datatable(head(bd0052[,var1],81),fillContainer = FALSE, options = list(pageL
 ---
 # Etapas del proceso de datos
 
-![](imagenes/proceso_datos.png)
+
+&lt;img src="imagenes/proceso_datos.png" width="500"&gt;
 &lt;br/&gt;&lt;br/&gt;
 
-[*] Tomado de : https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/
+[*] Imagen tomada de : https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/
 
 ---
 

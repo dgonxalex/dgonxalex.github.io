@@ -14,7 +14,18 @@ output:
         ratio: '16:9'
 ---
 class: inverse, center
+```{r setup, include=FALSE}
+options(htmltools.dir.version = TRUE)
+xaringanExtra::use_panelset()
 
+library(RColorBrewer)
+library(readxl)
+bd0052 <- read_excel("bases/bd0052.xlsx",sheet = "base20211", col_types = c("numeric", 
+        "numeric", "text", "text", "numeric", "numeric", "text", "numeric"))
+bd0052$carrera[bd0052$carrera=="Biologia"]="Biología"
+bd0052$carrera[bd0052$carrera=="Ingenieria Civil"]="Ingeniería Civil"
+
+```
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 # Que es Estadística ?
 <br/><br/><br/><br/><br/>
@@ -26,21 +37,18 @@ Análisis de datos para la toma de decisiones
 ## Grupos Probabilidad y Estadística 2021-1 
 .pull-left[
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(readxl)
-bd0052 <- read_excel("bases/bd0052.xlsx",sheet = "base20211", col_types = c("numeric", 
-        "numeric", "text", "text", "numeric", "numeric", "text", "numeric"))
-bd0052$carrera[bd0052$carrera=="Biologia"]="Biología"
-bd0052$carrera[bd0052$carrera=="Ingenieria Civil"]="Ingeniería Civil"
+
 attach(bd0052)
-t=table(carrera,grupo)
-knitr::kable(t)
+t1011=table(carrera,grupo)
+knitr::kable(t1011)
 
 ```
 ]
 .pull-right[
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=8, fig.height=8  }
-library(RColorBrewer)
-barplot(t,col = brewer.pal(18,"Set1"))
+
+barplot(t1011,col = brewer.pal(6,"Set1"))
+
 ```
 ]
 
@@ -60,26 +68,29 @@ p
 ]
 .pull-right[
 ```{r, echo=FALSE,fig.width=7, fig.height=7 }
-p<-ggplot(bd005NA, aes(x=grupo, y=promacum)) +
-geom_boxplot()
-p+scale_color_manual(values=c("#999999", "#E69F00", "#56B4E9"))
+p1012<-ggplot(bd005NA, aes(x=grupo, y=promacum)) +
+         geom_boxplot(fill = "palegreen", color = "blue4", 
+                      size=0.5, outlier.color = "blue4", outlier.size = 2)+
+         geom_jitter(color="black", size=0.4, alpha=0.9)
+p1012  
 ```
 ]
 ---
 
 .pull-left[
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-des=summarytools::descr(bd005NA$promacum); knitr::kable(des)
+des=summarytools::descr(bd005NA$promacum); 
+des=round(des,3)
+knitr::kable(des)
 ```
 ]
 .pull-right[
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-p= ggplot(bd005NA, )+
-geom_histogram(aes(x=promacum),
-binwidth = 0.5,
-fill = "grey", color = "black")
-p
+p1013= ggplot(bd005NA, aes(x=promacum))+
+  geom_histogram(col="black", 
+                 fill="blue", alpha=0.6,binwidth = 0.25)
+p1013
 ```
 ]
 
@@ -115,7 +126,7 @@ Existen repositorio de bases de datos para uso general
 
 ### Base datos iris (dataset R)
 
-```{r  message=FALSE, echo=FALSE}
+```{r ,warning=FALSE, message=FALSE}
 head(iris)
 ```
 Datos de iris (de Fisher o Anderson) 
@@ -152,8 +163,7 @@ Existen repositorio de bases de datos para uso general
 ## Base de datos
 
 ### Base datos iris (dataset R)
-```{r eval=FALSE}
-iris=iris
+```{r, eval=FALSE}
 DT::datatable(head(iris, 150),fillContainer = FALSE, options = list(pageLength = 8))
 ```
 
@@ -163,11 +173,6 @@ DT::datatable(head(iris, 150),fillContainer = FALSE, options = list(pageLength =
 ### Base de datos estudianes Probabilidad y Estadistica 2021-1
 
 ```{r , eval=FALSE}
-library(DT)
-library(readxl)
-bd0052 = read_excel("bases/bd0052.xlsx", sheet = "base20211", col_types = c("numeric", 
-        "numeric", "text", "text", "numeric","numeric", "text", "numeric"))
-attach(bd0052)
 var1=c(3,6,5,7)
 DT::datatable(head(bd0052[,var1],81),fillContainer = FALSE, options = list(pageLength = 8))
 ```
@@ -177,10 +182,11 @@ DT::datatable(head(bd0052[,var1],81),fillContainer = FALSE, options = list(pageL
 ---
 # Etapas del proceso de datos
 
-![](imagenes/proceso_datos.png)
+
+<img src="imagenes/proceso_datos.png" width="500">
 <br/><br/>
 
-[*] Tomado de : https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/
+[*] Imagen tomada de : https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/
 
 ---
 
