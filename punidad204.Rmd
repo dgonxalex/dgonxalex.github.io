@@ -3,7 +3,7 @@ title: "Unidad  2.1 Conceptos basicos y enfoque de probabilidad "
 subtitle: "Módulo 2"
 author: " "
 institute: "Daniel Enrique González Gómez <br/> Universidad Javeriana Cali"
-date: "2021-02-22"
+date: "2021-03-01"
 output:
     xaringan::moon_reader:
       css: ["default","ki-fonts","duke-blue"]
