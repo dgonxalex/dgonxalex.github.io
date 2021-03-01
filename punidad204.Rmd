@@ -1,5 +1,5 @@
 ---
-title: "Unidad  2.1 Conceptos basicos y enfoque de probabilidad "
+title: "Unidad  2.2 Aplicaciones de probabilidad "
 subtitle: "Módulo 2"
 author: " "
 institute: "Daniel Enrique González Gómez <br/> Universidad Javeriana Cali"
