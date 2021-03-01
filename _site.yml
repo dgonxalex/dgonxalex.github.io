@@ -10,7 +10,7 @@ navbar:
       icon: fa-inf
       href: about.html
     - text: "Modulos"
-      icon: fa-gear
+      icon: albums-outline
       menu:
          - text: "Modulo 1"
          - text: "Presentacion101"
@@ -39,3 +39,5 @@ navbar:
            href: punidad202.html
          - text: "Presentacion 203"
            href: punidad203.html
+         - text: "Presentacion 204"
+           href: punidad204.html

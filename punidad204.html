@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Unidad 2.1 Conceptos basicos y enfoque de probabilidad</title>
+    <meta charset="utf-8" />
+    <meta name="date" content="2021-02-22" />
+    <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+    <link href="site_libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="site_libs/remark-css-0.0.1/ki-fonts.css" rel="stylesheet" />
+    <link href="site_libs/remark-css-0.0.1/duke-blue.css" rel="stylesheet" />
+    <link href="site_libs/panelset-0.2.4/panelset.css" rel="stylesheet" />
+    <script src="site_libs/panelset-0.2.4/panelset.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Unidad 2.1 Conceptos basicos y enfoque de probabilidad
+## Módulo 2
+### 
+### Daniel Enrique González Gómez <br/> Universidad Javeriana Cali
+### 2021-02-22
+
+---
+
+class: inverse
+
+
+
+&lt;br/&gt;
+# AGENDA
+&lt;br/&gt;
+## 1. Dudas y preguntas
+
+## 2. Probabilidad Total
+
+## 3. Teorema de Bayes
+
+## 4. Varios
+
+---
+class: inverse
+---
+
+## Conceptos básicos
+
++ **Experimento aleatorio** : acción que se puede repetir bajo las mismas condiciones y cuyo resultado no se conoce anticipadamente.
+
++ **Espacio muestral** : conjunto de todos los posibles resultados que puede tomar el experimento aleatorio.
+
++ **Evento aleatorios** : subconjunto del espacio muestral de nuestro interés
+
+&lt;br/&gt;&lt;br/&gt; 
+**Enfoques de probabilidad**
+
+**Clásico** : `\(P(A)=\dfrac{n(A)}{n(S)}\)`
+&lt;br/&gt;&lt;br/&gt;
+**Frecuentista** : `\(\lim_{n \to{+}\infty}   P(A) =  \Bigg[ \dfrac{\text{número de veces que ocurre A}}{n} \Bigg]\)`
+
+&lt;br/&gt;
+&lt;br/&gt;
+**Subjetivo** : `\(P(A)=\)` asignada por un experto
+
+---
+
+**Axiomas de Probabilidad**
+
++ `\(A_{1}\)`:  Sea `\(S\)` un espacio muestral  asociado a un experimento. Entonces `\(P(S)=1\)` 
+
++ `\(A_{2}\)`:  Para cualquier evento `\(A\)`, se cumple que `\(0 \leq P(A) \leq 1\)`  
+
++ `\(A_{3}\)`:  Si `\(A\)` y `\(B\)` son dos eventos mutuamente excluyentes, entonces: 
+`\(P(A \cup B) = P(A) + P(B)\)` 
+
+En general `\(P(A \cup B) = P(A)+ P(B) - P(A \cap B)\)`   
+
++ `\(A_{4}\)`: Para cualquier evento `\(A\)`, `\(P(A^c)\)` = `\(1\)` - `\(P(A)\)`  
+
++ `\(A_{5}\)`: La probabilidad de `\(P(\phi) =0\)`   
+
+---
+.pull-left[
+**Particion** : 
+&lt;img src="imagenes/particion.png" width="450"&gt;
+Para un espacio muestral `\(S\)` se divide en particiones `\(A_1\)`, `\(A_2\)` ,... `\(A_n\)`  entonces : `\(P(S)=\sum_{i=1}^{n} P(A_{i})\)`
+]
+.pull-right[
+**Probabilidad Total **
+&lt;img src="imagenes/particionB.png" width="450"&gt;
+Si un espacio muestral `\(S\)` esta particionado en eventos mutuamente expluyentes `\(A_1\)`, `\(A_2\)` ,... `\(A_n\)` y `\(B\)` un evento cualquiera, entonces
+
+`\(P(B)\)` = `\(P(A_{1}\cap B)\)` + `\(P(A_{2} \cap B)\)` +... `\(P(A_{n}\cap B)\)`
+
+]
+
+&lt;br/&gt;
+`\(P(B)\)` = `\(P(B|A_{1})P(A_{1})\)` + `\(P(B|A_{2})P(A_{2}))\)` +... `\(P(B|A{n})P(A_{n})\)`
+---
+### Ejemplo
+Los clientes de una reconocida marca de vehículos pueden pedir un motor de tres tamaños diferentes($A_{1}$, `\(A_{2}\)` y `\(A_{3}\)`). De todos los automóviles vendidos, el 45% 
+tiene motor pequeño, un 35% 
+tienen motor mediano y el resto el mas grande. A los dos años de uso los autos son sometidos a una prueba de emisiones de gases y se observa que un 10% 
+de los autos con motor pequeño no pasan la prueba, un 12% 
+de los autos con motor mediano no pasan la prueba y  15% 
+de los autos con motor grande tampoco pasan la prueba.
+
+Cual es la probabilidad de que un automóvil que tiene un uso de dos años no pase la prueba de emisión de gases?
+
+Nota: Problema tomado de Navidi(2006)
+### Información:
+.pull-left[
++ `\(P(A_{1})=0.45\)`
+
++ `\(P(A_{2})=0.35\)`
+
++ `\(P(A_{3})=0.20\)`
+]
+.pull-right[
++ `\(P(B|A_{1})=0.10\)`
+
++ `\(P(B|A_{2})=0.12\)`
+
++ `\(P(B|A_{3})=0.15\)`
+]
+
+`$$P(B) = ?$$`
+---
+class: inverse
+&lt;img src="imagenes/arbolN.png" width="650"&gt;
+
+---
+class: inverse
+### Probabilidad total
+&lt;img src="imagenes/vennN.png" width="800"&gt;
+
+---
+class: inverse
+.pull-left[
+&lt;img src="imagenes/vennN.png" width="500"&gt;
+&lt;img src="imagenes/arbolN.png" width="400"&gt;
+]
+.pull-right[
+&lt;img src="imagenes/tablaN.png" width="400"&gt;
+]
+---
+class: inverse
+### Teorema de Bayes
+
+Ahora si estamos interesados en valorar las probabilidad `\(P(A_{1}|B)\)` , `\(P(A_{2}|B)\)` o `\(P(A_{3}|B)\)`, es decir que si sabemos que un automóvil no paso la prueba de emisión de gases después de dos años de uso, cual modelo de automóvil es el mas probable que sea el que no cumplió con las pruebas?
+
+.pull-left[
+&lt;img src="imagenes/arbolN.png" width="400"&gt;
+]
+.pull-right[
+&lt;img src="imagenes/tablaN.png" width="400"&gt;
+]
+---
+class: inverse
+### Ejemplo 2
+
+En una fabrica de artículos para protección biodegradables, cuatro operarios colocan etiquetas de caducidad en cada artículo al final de la línea de producción. Juan, quien coloca la fecha de caducidad en un 40 % de los paquetes no
+logra ponerla en uno de cada 200 paquetes; Maria, quien coloca en 30 % de los paquetes, no logra colocarla en uno
+de 100 paquetes; Laura, quien coloca etiquetas en el 15 % de los paquetes, no lo hace una vez en 90 paquetes; y Santiago que fecha 15 % de los paquetes, falla en uno de cada 200 paquetes. Si un cliente se queja de que su paquete no
+muestra la fecha de caducidad. ¿Cual de los empleados es el mas probable culpable de esta omisión?
+
+---
+class: inverse
+&lt;img src="imagenes/ejemplo2a.png" width="900"&gt;
+---
+class: inverse
+&lt;img src="imagenes/ejemplo2b.png" width="900"&gt;
+---
+class: inverse
+&lt;img src="imagenes/ejemplo2c.png" width="900"&gt;
+---
+class: inverse right
+background-image: url("imagenes/couple-5267726_1920.jpg")
+&lt;br/&gt;&lt;br/&gt; 
+&lt;br/&gt;&lt;br/&gt; 
+&lt;br/&gt;&lt;br/&gt; 
+&lt;br/&gt;&lt;br/&gt; 
+&lt;br/&gt;&lt;br/&gt; 
+&lt;br/&gt;&lt;br/&gt; 
+&lt;br/&gt;&lt;br/&gt; 
+&lt;br/&gt;&lt;br/&gt; 
+### &lt;p style="color:yellow"&gt; “Tu destino lo escribes tú mismo con cada decisión que tomas”...&lt;br/&gt;&lt;br/&gt; (Betty Lepe) &lt;/p&gt;
+&lt;p style="color:yellow"&gt; Daniel Enrique González Gómez &lt;/p&gt;
+Imagen tomada de : https://pixabay.com/es/images/search/paisaje/
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highighStyle": "github",
+"highlighLine": true,
+"countIncrementalSlides": true,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
