@@ -1,0 +1,26 @@
+---
+title: "Unidad  2.2 Aplicaciones de probabilidad "
+subtitle: "Módulo 2"
+author: " "
+institute: "Daniel Enrique González Gómez <br/> Universidad Javeriana Cali"
+date: "2021-03-03"
+output:
+    xaringan::moon_reader:
+      css: ["default","ki-fonts","duke-blue"]
+      nature:
+        highighStyle: github
+        highlighLine: true
+        countIncrementalSlides : true
+        ratio: '16:9'
+---
+class: inverse, center, middle
+```{r setup, include=FALSE}
+options(htmltools.dir.version = TRUE)
+xaringanExtra::use_panelset()
+```
+
+# MONITORIA
+
+
+---
+
