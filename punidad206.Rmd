@@ -40,7 +40,38 @@ class: inverse
 
 <img src="imagenes/d1.png" width="1000">
 
+---
+### Problema 1
+Determine cual de las siguienes configuraciones tiene mejor fiabilidad.  <br/>
+Todos los componentes tienen igual probabilidad de falla (0.05) y funcionan de manera independiente
+<img src="imagenes/g2.png" width="800">
 
+---
+### Problema 2
+Tres máquinas A, B y C producen respectivamente 60%, 30% y 10% del número total de artículos de una fábrica. Los porcentajes de desperfectos de producción de estas máquinas son respectivamente 2%, 3% y 4%. Seleccionando un artículo al azar resultó defectuoso. <br/><br/>
+Hallar la probabilidad de que el artículo hubiera sido producido por la máquina C.  Es esta la máquina con mayor probabilidad de heber originado el problema?
+---
+class: center
+<img src="imagenes/Video202_1.png" width="1000">
+
+[<img src="imagenes/play.png" width="100">](https://www.youtube.com/watch?v=7KCkg0a_yGc)
+
+
+
+---
+class:inverse,right,center
+background-image: url("imagenes/camino_a_seguir2.jpg")
+<br/><br/> 
+<br/><br/> 
+<br/><br/> 
+<br/><br/> 
+<br/><br/> 
+<br/><br/> 
+<br/><br/> 
+<br/><br/> 
+### <p style="color:yellow"> “Para elegir tu camino debes informarte primero”...<br/><br/></p>
+<p style="color:yellow"> Daniel Enrique González Gómez </p>
+Imagen tomada de : https://pixabay.com/es/images/search/paisaje/
 
 
 
