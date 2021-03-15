@@ -25,24 +25,23 @@ style_mono_light(base_color ="#383C69")
 #"#23395b") # color verde militar
 
 ```
----
 class: inverse, center 
-### Que es una variable? <br/>
+### ¿ Què es una variable? <br/>
 --
 
-### Que es una variable aleatoria?<br/>
+### ¿ Que es una variable aleatoria ?<br/>
 --
 
-### Que caracteristicas tiene?<br/>
+### ¿ Què caracterìsticas tiene ?<br/>
 --
 
-### Para que nos sirve estudiar caracterizacion?<br/>
+### ¿ Para que nos sirve estudiar caracterizaciòn?<br/>
 --
 
-### Como se relaciona este tema con lo que estudio?<br/>
+### ¿ Còmo se relaciona este tema con lo que estudio ?<br/>
 --
 
-### Ejemplos de variables aleatorias<br/>
+### Ejemplos de variables aleatorias <br/>
 
 ---
 class: center inverse
@@ -52,11 +51,24 @@ class: center inverse
 
 
 ---
+class: inverse, center 
+### Caso variable aleatoria discreta
+
+<iframe width="900" height="500" src="https://www.youtube.com/embed/CUMJ-MUiMaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+---
+class: inverse, center 
+### Caso variable aleatoria continua
 
+<iframe width="900" height="500" src="https://www.youtube.com/embed/rlBxuLdOUt0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+---
+class:,center
+<img src="imagenes/modelos.jpg" width="700">
+<br/>
+#### <p style="color:blue"> “Los modelos matemàticos nos permiten entender la realizada”...</p>
+<p style="color:blue"> Imagen tomada de: https://pixabay.com/es/images/search/paisaje/
 
 
 
