@@ -1,0 +1,64 @@
+---
+title: "Unidad 3.1 Variable aleatoria"
+subtitle: "Módulo 3"
+author: " "
+institute: "Daniel Enrique González Gómez <br/> Universidad Javeriana Cali"
+date: "2021-03-15"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(base_color ="#383C69")
+#2c5697") # color institucional puj  
+#"#23395b") # color verde militar
+
+```
+---
+class: inverse, center 
+### Que es una variable? <br/>
+--
+
+### Que es una variable aleatoria?<br/>
+--
+
+### Que caracteristicas tiene?<br/>
+--
+
+### Para que nos sirve estudiar caracterizacion?<br/>
+--
+
+### Como se relaciona este tema con lo que estudio?<br/>
+--
+
+### Ejemplos de variables aleatorias<br/>
+
+---
+class: center inverse
+### Variable aleatoria
+
+<iframe width="900" height="500" src="https://www.youtube.com/embed/ABhDYVIfF0w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+---
+
+
+
+
+
+
+
+
+
+

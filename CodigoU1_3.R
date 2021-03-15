@@ -87,7 +87,8 @@ colnames(t3)=c("Muy Regular","Regular","Bien","Muy bien","Excelente")
 barplot(t3, main="Percepción del resultado obtenido por carrera",
         xlab="Carrera",
         ylab="Percepcion", col=c("orange","green","blue"),
-        legend = rownames(t3))
+        legend = rownames(t3),
+        ylim = c(0,70))
 
 #-------------------------------------------------------------------------------
 #

@@ -45,6 +45,9 @@ navbar:
            href: punidad205.html   
          - text: "Presentacion 206"
            href: punidad206.html
-           
+         - text: "---------"
+         - text: "Modulo 3" 
+         - text: "Presentacion 301"
+           href: punidad301.html         
            
            
