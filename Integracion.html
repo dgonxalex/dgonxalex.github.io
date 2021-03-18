@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="dgonzalez" />
 
 
-<title>index.utf8</title>
+<title>Anexo - Integracion con R</title>
 
 <script src="site_libs/header-attrs/header-attrs.js"></script>
 <script src="site_libs/jquery/jquery.min.js"></script>
@@ -377,11 +378,146 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Anexo - Integracion con R</h1>
+<h4 class="author">dgonzalez</h4>
+<h4 class="date">17/3/2021</h4>
 
 </div>
 
 
-<p>PÁGINA EN CONSTRUCCIÓN</p>
+<div id="representacion-de-funciones-e-integracion-con-r" class="section level3">
+<h3>Representacion de funciones e integracion con R</h3>
+<p>R permite representar funciones de distribucion de probabilidad (variables aleatorias discrettas) y tambien funciones de densidad de probabilidad ( en el caso continuo)</p>
+<p>A continuacion se presenta ejemplos de cada caso</p>
+<div id="caso-discreto" class="section level4">
+<h4>Caso discreto</h4>
+<p>Sea X una variable aleatoria discreta con funcion de distribucion de probabilidad: <span class="math display">\[ f(x) = \left \{ \begin{matrix} \dfrac{\exp\{-2\} 2^{x}}{x!} &amp; x=0,1,2,3,4.... \\
+&amp;\\
+0  &amp; \mbox{ en cualquier otro caso}\end{matrix}\right.  \]</span></p>
+<ul>
+<li>Representar graficamente la funcion</li>
+</ul>
+<pre class="r"><code>fx=function(x){
+  (exp(-2)*2^x)/factorial(x)}
+x=0:9
+plot(x,fx(x),pch=19 )</code></pre>
+<p><img src="Integracion_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code># Tabla de probabilidades 
+f_x=round(fx(x),4)
+data.frame(x,f_x)</code></pre>
+<pre><code>##    x    f_x
+## 1  0 0.1353
+## 2  1 0.2707
+## 3  2 0.2707
+## 4  3 0.1804
+## 5  4 0.0902
+## 6  5 0.0361
+## 7  6 0.0120
+## 8  7 0.0034
+## 9  8 0.0009
+## 10 9 0.0002</code></pre>
+<p><strong>Nota</strong>: El rango de X (<span class="math inline">\(R_X\)</span>) corresponde a los enteros positivos : 0,1,2,3,4,5,6,…..</p>
+<ul>
+<li>Verificar que es una funcion de distribucion de probabilidad</li>
+</ul>
+<pre class="r"><code>x=0:100
+sum(fx(x))</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p><strong>Nota</strong> se toma n=100 como un numero grande de valores de la variables. <code>fx(100)=1.83826e-129</code></p>
+<ul>
+<li>Calcular la probabilidad de que la variable X este entre 3 y 6 (se inclusive 3 y 6) <span class="math display">\[P(3 \leq X \leq 6)\]</span></li>
+</ul>
+<pre class="r"><code>sum(fx(3:6))</code></pre>
+<pre><code>## [1] 0.3187898</code></pre>
+<ul>
+<li>Calcular su valor esperado</li>
+</ul>
+<p><span class="math display">\[E[X]= \sum_{i=0}^{\infty} x_{i} f(x_{i}) \]</span></p>
+<pre class="r"><code>x=0:100
+f_x=fx(x)
+Ex=sum(x*f_x)
+Ex</code></pre>
+<pre><code>## [1] 2</code></pre>
+<ul>
+<li>Calcular su varianza</li>
+</ul>
+<p><span class="math display">\[V[X]=E[X^{2}]-E[X]^{2}\]</span></p>
+<pre class="r"><code>x=0:100
+Ex=sum(x*fx(x))
+Ex2=sum(x^2*fx(x))
+
+Vx=Ex2-Ex^2
+Vx</code></pre>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="caso-continuo" class="section level4">
+<h4>Caso continuo</h4>
+<p>Sea X una variable aleatoria continua con funcion de densidad de probabilidad :</p>
+<p><span class="math display">\[ f(y) = \left \{ \begin{matrix} 2(1+y)/27 &amp;\mbox{,   } 2 \leq x \leq 5  \\
+&amp;\\
+0  &amp; \mbox{, en cualquier otro caso}\end{matrix}\right.  \]</span></p>
+<ul>
+<li>Graficar la distribucion</li>
+</ul>
+<pre class="r"><code>fy=function(y){2*(1+y)/27}
+curve(fy, 2,5)   # forma 1</code></pre>
+<p><img src="Integracion_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre class="r"><code>y=seq(2,5, by=0.1)
+f_y=fy(y)
+
+y1=c(2,y,5)
+f_y1=c(0,f_y,0)
+
+plot(y,f_y, type=&quot;l&quot;, ylim=c(0,0.5),col=&quot;blue&quot;, lwd=5, xlim=c(0,5)) # forma 2
+polygon(y1,f_y1,col = &quot;#1b98e0&quot;) </code></pre>
+<p><img src="Integracion_files/figure-html/unnamed-chunk-6-2.png" width="672" /></p>
+<ul>
+<li>Verificar que f(x) es una funcion de densidad de probabilidad</li>
+</ul>
+<p><span class="math display">\[\int_{-\infty0}^{\infty} f(x) \,dx = 1 \]</span></p>
+<pre class="r"><code>integrate(fy,2,5)</code></pre>
+<pre><code>## 1 with absolute error &lt; 1.1e-14</code></pre>
+<ul>
+<li>Calcular la probabilidad de que X se encuentre en tre 3 y 4.6</li>
+</ul>
+<p><span class="math display">\[ P(3 \leq X \leq 4.6) = \int_{3}^{4.6} f(x) \,dx\]</span></p>
+<pre class="r"><code>y=seq(2,5, by=0.1)
+f_y=fy(y)
+
+y1=seq(3,4.6, 0.1)
+f_y1=fy(y1)
+
+y1=c(3,y1,4.6)
+f_y1=c(0,f_y1,0)
+
+plot(y,f_y, type=&quot;l&quot;, ylim=c(0,0.5),col=&quot;blue&quot;, lwd=5, xlim=c(0,5)) # forma 2
+abline(h=0, v=0)
+polygon(y1,f_y1,col = &quot;#1b98e0&quot;) </code></pre>
+<p><img src="Integracion_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre class="r"><code>integrate(fy,3.0,4.6)</code></pre>
+<pre><code>## 0.5688889 with absolute error &lt; 6.3e-15</code></pre>
+<ul>
+<li>Encontrar el valor esperado de la variable</li>
+</ul>
+<p><span class="math display">\[E[X] = \int_{\infty}^{\infty} x f(x) \,dx\]</span></p>
+<pre class="r"><code>fy1=function(y){y*(2*(1+y)/27)} 
+integrate(fy1,2,5)</code></pre>
+<pre><code>## 3.666667 with absolute error &lt; 4.1e-14</code></pre>
+<ul>
+<li>Calcular su varianza</li>
+</ul>
+<p><span class="math display">\[V[X]=E[X^{2}]-E[X]^{2}\]</span></p>
+<pre class="r"><code>fy1=function(y){y*(2*(1+y)/27)} 
+Ex=integrate(fy1,2,5)
+
+fy2=function(y){y^2*(2*(1+y)/27)} 
+Ex2=integrate(fy2,2,5)
+
+Vx=Ex2$value-Ex$value^2
+Vx</code></pre>
+<pre><code>## [1] 0.7222222</code></pre>
+</div>
+</div>
 
 
 
