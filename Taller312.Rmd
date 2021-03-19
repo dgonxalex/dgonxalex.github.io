@@ -1,0 +1,127 @@
+---
+title: " "
+subtitle: "Taller 302"
+author: "dgonzalez"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+fx1=function(x){exp(-x)}
+Fx2=function(x){2*x}
+fx3=function(x){(2*x+1)/25}
+fx4=function(x){(3/4)*(1/4)^x}
+
+```
+
+## Punto 1
+Suponga que $f_X(x)=exp(-x)$ para $0<x$ , $0$ en cualquier otro caso. Determine: 
+
+```{r}
+fx1=function(x){exp(-x)}
+x1=seq(0,5,0.1)
+fx=fx1(x1)
+plot(x1,fx, type="l")
+grid()
+integrate(fx1,0,Inf)
+```
+
+
++  $P(1 < X)$
+```{r}
+integrate(fx1,1,Inf)
+```
+
++  $P(1 < X < 2.5)$
+
++  $P(X = 3)$
+
++  $P(X<4)$
+
++  $Me$
+
++  $Q_{1}$
+
++  $Q_{3}$
+
++  $E[X]$
+```{r}
+fxx=function(x){x*exp(-x)}
+integrate(fxx,0,Inf)
+```
+
++ $V[X]$
+```{r}
+fxx=function(x){x*exp(-x)}
+Ex=integrate(fxx,0,Inf)
+
+fxx=function(x){x^2*exp(-x)}
+Ex2=integrate(fxx,0,Inf)
+
+Vx=Ex2$value-Ex$value^2
+Vx
+```
+
+## Punto 2
+Suponga que X es una variable aleatoria continua con funcio de distribucion acumulada
+ 
+ $$f(x)=\left\{\begin{matrix}0&\mbox{si }x<0\\ 2x & \mbox{si } 0 < x < 5 \\ 
+                      1  & \mbox{si } 5 \leq x  \end{matrix}\right. $$
+
++ $P(X < 2)$
+
++ $P(X = 1.5)$
+
++ $P( X > 3)$
+
++ $P(0.5 < X <2.7)$
+
+##  Punto 3
+Para una variable aleatoria con funcion de distribucion:
+
+ $$f(x)=\left\{\begin{matrix}\dfrac{(2x+1)}{25}& x=0,1,2,3,4.\\ & \\
+ 0 & \mbox{para cualquier otro caso} \end{matrix}\right.$$
+ 
+```{r}
+fx3=function(x){(2*x+1)/25}
+x=0:4
+plot(x,fx3(x), pch=19)
+sum(fx3(x))
+```
+
++ $P(X=4)$
+
++ $P(X\leq 1)$
+
++ P(2 \leq X < 4)$
+
++ $E[X]$
+
++ $V[X]$
+
+## Punto 4
+Para una variable aleatoria con funcion de distribucion de probabilidad $f(x)=(3/4)(1/4)^{x}$, para $x=0,1,2,3,....... $
+```{r}
+x=0:10
+plot(x,fx4(x), pch=19)
+```
+
++ $P(X=2)$
+
++ $P(X\leq 2)$
+
++ $P(X < 2)$
+
++ $P(X > 2)$
+
++ $E[X]$
+
++ $V[X]$
+
+
+

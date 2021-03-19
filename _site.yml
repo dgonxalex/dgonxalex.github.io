@@ -51,5 +51,6 @@ navbar:
            href: punidad301.html     
          - text: "Integracion"
            href: Integracion.html    
-           
+         - text: "Taller 312"
+           href: Taller312.html           
            
