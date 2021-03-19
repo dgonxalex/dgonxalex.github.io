@@ -1,13 +1,16 @@
 ---
-title: " "
-subtitle: "Taller 302"
+title: "Taller 312 "
 author: "dgonzalez"
-output: 
+subtitle: Taller 302
+output:
   html_document:
-    toc: true
+    toc: yes
     toc_depth: 2
-    toc_float: true
+    toc_float: yes
     theme: cosmo
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
 ---
 
 ```{r setup, include=FALSE}
@@ -28,13 +31,32 @@ x1=seq(0,5,0.1)
 fx=fx1(x1)
 plot(x1,fx, type="l")
 grid()
-integrate(fx1,0,Inf)
+
+x=seq(0,5, by=0.1)
+fx=fx1(x)
+
+x.1=c(0,x,5)
+fx.1=c(0,fx,0)
+
+plot(x,fx, type="l", ylim=c(0,1),col="blue", lwd=5, xlim=c(0,5)) # forma 2
+polygon(x.1,fx.1,col = "#1b98e0") 
+
+integrate(fx1,0,Inf) # verificacion de que f(x) es una funcion de densidad de probabilidad
 ```
 
 
 +  $P(1 < X)$
 ```{r}
-integrate(fx1,1,Inf)
+x=seq(1,5, by=0.1)
+fx=fx1(x)
+
+x.1a=c(1,x,5)
+fx.1a=c(0,fx,0)
+
+plot(x,fx, type="l", ylim=c(0,1),col="blue", lwd=5, xlim=c(0,5)) # forma 2
+polygon(x.1a,fx.1a,col = "#1b98e0") 
+
+integrate(fx1,1,Inf) # P(X>1)
 ```
 
 +  $P(1 < X < 2.5)$
@@ -58,13 +80,13 @@ integrate(fxx,0,Inf)
 + $V[X]$
 ```{r}
 fxx=function(x){x*exp(-x)}
-Ex=integrate(fxx,0,Inf)
+Ex=integrate(fxx,0,Inf)  # valor esperado de X. primer momento
 
 fxx=function(x){x^2*exp(-x)}
-Ex2=integrate(fxx,0,Inf)
+Ex2=integrate(fxx,0,Inf)  # segundo momento  de X
 
-Vx=Ex2$value-Ex$value^2
-Vx
+Vx=Ex2$value-Ex$value^2 # varianza de X
+Vx 
 ```
 
 ## Punto 2
@@ -91,7 +113,7 @@ Para una variable aleatoria con funcion de distribucion:
 fx3=function(x){(2*x+1)/25}
 x=0:4
 plot(x,fx3(x), pch=19)
-sum(fx3(x))
+sum(fx3(x)) # verificacion de que f(x) es una funcion de distribucion de probabilidad
 ```
 
 + $P(X=4)$
@@ -123,5 +145,18 @@ plot(x,fx4(x), pch=19)
 
 + $V[X]$
 
+## Punto 13
+
+$$\binom{25}{x}0.80^x 0.20^{25-x}$$
+
+```{r}
+fx=function(x){choose(25,x)*0.80^x*(1-0.80)^(25-x)}
+x=0:25
+f.x=fx(x)
+plot(x,f.x, pch=19)
+sum(f.x) # verificacion de que f(x) es una fun.de distribucion de probabilidad
+fx(20) # P(X=20)
+sum(f.x[0:20]) # P(X<=20)
+```
 
 

@@ -12,7 +12,7 @@
 <meta name="author" content="dgonzalez" />
 
 
-<title>Taller312.utf8</title>
+<title>Taller 312</title>
 
 <script src="site_libs/header-attrs/header-attrs.js"></script>
 <script src="site_libs/jquery/jquery.min.js"></script>
@@ -457,6 +457,9 @@ div.tocify {
 
 
 
+<h1 class="title toc-ignore">Taller 312</h1>
+<h3 class="subtitle">Taller 302</h3>
+<h4 class="author">dgonzalez</h4>
 
 </div>
 
@@ -470,12 +473,30 @@ fx=fx1(x1)
 plot(x1,fx, type=&quot;l&quot;)
 grid()</code></pre>
 <p><img src="Taller312_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<pre class="r"><code>integrate(fx1,0,Inf)</code></pre>
+<pre class="r"><code>x=seq(0,5, by=0.1)
+fx=fx1(x)
+
+x.1=c(0,x,5)
+fx.1=c(0,fx,0)
+
+plot(x,fx, type=&quot;l&quot;, ylim=c(0,1),col=&quot;blue&quot;, lwd=5, xlim=c(0,5)) # forma 2
+polygon(x.1,fx.1,col = &quot;#1b98e0&quot;) </code></pre>
+<p><img src="Taller312_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<pre class="r"><code>integrate(fx1,0,Inf) # verificacion de que f(x) es una funcion de densidad de probabilidad</code></pre>
 <pre><code>## 1 with absolute error &lt; 5.7e-05</code></pre>
 <ul>
 <li><span class="math inline">\(P(1 &lt; X)\)</span></li>
 </ul>
-<pre class="r"><code>integrate(fx1,1,Inf)</code></pre>
+<pre class="r"><code>x=seq(1,5, by=0.1)
+fx=fx1(x)
+
+x.1a=c(1,x,5)
+fx.1a=c(0,fx,0)
+
+plot(x,fx, type=&quot;l&quot;, ylim=c(0,1),col=&quot;blue&quot;, lwd=5, xlim=c(0,5)) # forma 2
+polygon(x.1a,fx.1a,col = &quot;#1b98e0&quot;) </code></pre>
+<p><img src="Taller312_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>integrate(fx1,1,Inf) # P(X&gt;1)</code></pre>
 <pre><code>## 0.3678794 with absolute error &lt; 2.1e-05</code></pre>
 <ul>
 <li><p><span class="math inline">\(P(1 &lt; X &lt; 2.5)\)</span></p></li>
@@ -493,13 +514,13 @@ integrate(fxx,0,Inf)</code></pre>
 <li><span class="math inline">\(V[X]\)</span></li>
 </ul>
 <pre class="r"><code>fxx=function(x){x*exp(-x)}
-Ex=integrate(fxx,0,Inf)
+Ex=integrate(fxx,0,Inf)  # valor esperado de X. primer momento
 
 fxx=function(x){x^2*exp(-x)}
-Ex2=integrate(fxx,0,Inf)
+Ex2=integrate(fxx,0,Inf)  # segundo momento  de X
 
-Vx=Ex2$value-Ex$value^2
-Vx</code></pre>
+Vx=Ex2$value-Ex$value^2 # varianza de X
+Vx </code></pre>
 <pre><code>## [1] 1</code></pre>
 </div>
 <div id="punto-2" class="section level2">
@@ -523,7 +544,7 @@ Vx</code></pre>
 x=0:4
 plot(x,fx3(x), pch=19)</code></pre>
 <p><img src="Taller312_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<pre class="r"><code>sum(fx3(x))</code></pre>
+<pre class="r"><code>sum(fx3(x)) # verificacion de que f(x) es una funcion de distribucion de probabilidad</code></pre>
 <pre><code>## [1] 1</code></pre>
 <ul>
 <li><p><span class="math inline">\(P(X=4)\)</span></p></li>
@@ -547,6 +568,21 @@ plot(x,fx4(x), pch=19)</code></pre>
 <li><p><span class="math inline">\(E[X]\)</span></p></li>
 <li><p><span class="math inline">\(V[X]\)</span></p></li>
 </ul>
+</div>
+<div id="punto-13" class="section level2">
+<h2>Punto 13</h2>
+<p><span class="math display">\[\binom{25}{x}0.80^x 0.20^{25-x}\]</span></p>
+<pre class="r"><code>fx=function(x){choose(25,x)*0.80^x*(1-0.80)^(25-x)}
+x=0:25
+f.x=fx(x)
+plot(x,f.x, pch=19)</code></pre>
+<p><img src="Taller312_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<pre class="r"><code>sum(f.x) # verificacion de que f(x) es una fun.de distribucion de probabilidad</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>fx(20) # P(X=20)</code></pre>
+<pre><code>## [1] 0.1960151</code></pre>
+<pre class="r"><code>sum(f.x[0:20]) # P(X&lt;=20)</code></pre>
+<pre><code>## [1] 0.3833106</code></pre>
 </div>
 
 
